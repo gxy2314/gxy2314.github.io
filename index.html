@@ -111,14 +111,26 @@
 <li><p>JavaScript中排序默认是字典序排序，需要按值升序则<code>array.sort((a, b) =&gt; a - b);</code></p>
 </li>
 <li><p>const和let只有块作用域，在代码块之外调用，声明let的那一行会报定义但未使用的错误，使用let的那一行会报未定义就使用的错误</br></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var a= []; </span><br><span class="line">for (var i = O; i &lt; 10; i++) &#123; </span><br><span class="line">	a [i] = function () &#123; </span><br><span class="line">	console.log(i); </span><br><span class="line">	&#125; // 存入数组 等打印时再执行</span><br><span class="line">&#125;</span><br><span class="line">a[6](); //10</span><br><span class="line"></span><br><span class="line">//上面的代码中，变量i是 var 声明的，在全局范围内都有效，所以全局只有 一个变量i。每一次循环，变量 i的值都会发生改变，而循环内，被赋给数组a //的函数内部的console.log(i)中的i 指向全局的i。也就是说，所有数组a 的成员中的i 指向的都是同一个i，导致运行时输出的是最后一轮的i 值，也//就是 10</span><br></pre></td></tr></table></figure>
 </li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var a= []; </span><br><span class="line">for (var i = O; i &lt; 10; i++) &#123; </span><br><span class="line">	a [i] = function () &#123; </span><br><span class="line">	console.log(i); </span><br><span class="line">	&#125; // 存入数组 等打印时再执行</span><br><span class="line">&#125;</span><br><span class="line">a[6](); //10</span><br><span class="line"></span><br><span class="line">//上面的代码中，变量i是 var 声明的，在全局范围内都有效，所以全局只有 一个变量i。每一次循环，变量 i的值都会发生改变，而循环内，被赋给数组a //的函数内部的console.log(i)中的i 指向全局的i。也就是说，所有数组a 的成员中的i 指向的都是同一个i，导致运行时输出的是最后一轮的i 值，也//就是 10</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
 <li><p>JavaScript中数组的长度<code>array.length</code>后面没括号</p>
 </li>
-<li><p>最后返回的如果是一个全局变量，那么每次上来一定要将其初始化</p>
+<li><p>如果解决算法是一个函数实现的，其中有涉及对全局变量的使用，那么使用之前一定要先初始化</p>
 </li>
 <li><p>如果回溯时push&#x2F;pop的操作对象<code>vari</code>同时是需要返回的内容，那么上来最好先创建一个变量，<code>let shinvari=vari.slice()</code>; 并将push&#x2F;pop操作的对象转换到<code>shinvari</code></p>
 </li>
+<li><p>二维数组的初始化</p>
+<p><code>const shinArray = Array.from(&#123;length: 行数&#125;, () =&gt; new Array(列数).fill(0)); </code></p>
+<p><code>&#123;length: 行数&#125;</code> 表示生成一个长度为目标行数的空数组</p>
+<p><code>new Array(列数)</code>：为每一行创建一个长度为目标列数的新数组</p>
+</li>
+<li><p>对于JavaScript中需要取整的情况，可通过以下方式实现</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Math</span>.<span class="title function_">floor</span>(需要取整的数) <span class="comment">// 向下取整</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">ceil</span>(需要取整的数) <span class="comment">// 向上取整</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="title function_">round</span>(需要取整的数) <span class="comment">// 四舍五入</span></span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
 </ol>
 <h5 id="JavaScript中的二维数组"><a href="#JavaScript中的二维数组" class="headerlink" title="JavaScript中的二维数组"></a>JavaScript中的二维数组</h5><ol>
 <li>如果需要判定JavaScript中的一个二维数组中的一个一维数组元素是否和另一个一维数组在内容上相等，则不能直接使用 <code>二维数组.includes(一维数组)</code>，正确的做法是<code>二维数组.some(item=&gt;JSON.stringify(item)==目标数组)</code></li>
@@ -225,8 +237,11 @@
 </ul>
 <h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p><code>git remote -v</code>查看远程仓库</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">origin  https://github.com/sparkFlare/spark-vue.git (fetch)</span><br><span class="line">origin  https://github.com/sparkFlare/spark-vue.git (push)</span><br></pre></td></tr></table></figure>
+
 <p><code>git checkout 分支名</code>切换到某个分支<br><code>git status</code>查看状态<br><code>git branch</code>查看分支<br><code>git checkout -b 新分支名</code>以当前分支为基础新建分支<br><code>git push -u origin 新分支名</code>推送新建分支时，在远端新建此仓库<br>交代码<br><code>git commit -m &quot;注释内容&quot;</code>(提交到仓库区) 将暂存区中的所有内容提交到本地仓库。<br><code>git add .</code>将工作区（Working Directory）中所有被修改、新增的文件添加到暂存区（Staging Area）<br><code>git push</code>发射</p>
-<h5 id="创建一个新仓库，并把本地的代码传上去"><a href="#创建一个新仓库，并把本地的代码传上去" class="headerlink" title="创建一个新仓库，并把本地的代码传上去"></a>创建一个新仓库，并把本地的代码传上去</br></h5><p>1.<br><code>git config user.name &quot;用户名&quot;</code><br><code>git config user.email &quot;邮箱&quot;</code><br><code>ssh-keygen -t rsa -C &quot;邮箱名&quot;</code><br>这一步记得先在某个目录下创建一个ssh用于承接公钥<br>复制gitsshkey.pub里的所有内容到GitHub的NEW SSH KEY</p>
+<h5 id="创建一个新仓库，并把本地的代码传上去"><a href="#创建一个新仓库，并把本地的代码传上去" class="headerlink" title="创建一个新仓库，并把本地的代码传上去"></a>创建一个新仓库，并把本地的代码传上去</br></h5><ol>
+<li><code>git config user.name &quot;用户名&quot;</code><br><code>git config user.email &quot;邮箱&quot;</code><br><code>ssh-keygen -t rsa -C &quot;邮箱名&quot;</code><br>这一步记得先在某个目录下创建一个ssh用于承接公钥<br>复制gitsshkey.pub里的所有内容到GitHub的NEW SSH KEY</li>
+</ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">// 去除不想上传的文件 git rm --cached &lt;文件名&gt;</span><br><span class="line">git commit -m &quot;备注&quot;</span><br><span class="line">git branch -M 更改本地分支名</span><br><span class="line">git remote add origin 远程地址</span><br><span class="line">git remote set-url origin 远程地址</span><br><span class="line">//这是重设地址</span><br><span class="line">#6</span><br><span class="line">git push -u origin 分支名</span><br><span class="line">//最后一条新分支也可以用</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h4 id="debug-1"><a href="#debug-1" class="headerlink" title="debug"></a>debug</h4><p><code>git config --global http.sslVerify false</code></p>
