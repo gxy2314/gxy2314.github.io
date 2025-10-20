@@ -323,30 +323,29 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h2 id="普适"><a href="#普适" class="headerlink" title="普适"></a>普适</h2><h4 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h4><h5 id="标签"><a href="#标签" class="headerlink" title="&lt;a&gt;标签"></a><code>&lt;a&gt;标签</code></h5><p>是指示跳转的标签，是行内标签，可以嵌套各种元素</p>
+			<h2 id="普适"><a href="#普适" class="headerlink" title="普适"></a>普适</h2><h4 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h4><h5 id="lt-a-gt-标签"><a href="#lt-a-gt-标签" class="headerlink" title="&lt;a&gt;标签"></a><code>&lt;a&gt;标签</code></h5><p>是指示跳转的标签，是行内标签，可以嵌套各种元素</p>
 <p>原生前端写法<code>&lt;a href=&quot;xxx.html&quot;&gt;&lt;/a&gt;</code></p>
 <p>vue写法</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;back-to-home&quot;&gt;&lt;a class=&quot;back-to-home-link&quot; @click=&quot;$router.push(&#x27;/&#x27;)&quot;&gt;</span><br><span class="line">    &lt;i class=&quot;el-icon-back&quot;&gt;&lt;/i&gt;返回首页&lt;/a&gt;&lt;/div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<h5 id="标签-1"><a href="#标签-1" class="headerlink" title="&lt;textarea&gt;标签"></a><code>&lt;textarea&gt;标签</code></h5><p>​    <code>placeholder</code>:用户没有输入时，显示的文字，用户输入则消失</p>
+<h5 id="lt-textarea-gt-标签"><a href="#lt-textarea-gt-标签" class="headerlink" title="&lt;textarea&gt;标签"></a><code>&lt;textarea&gt;标签</code></h5><p>​    <code>placeholder</code>:用户没有输入时，显示的文字，用户输入则消失</p>
 <p>​    <code>rows</code>:行数</p>
 <p>   <code>:disabled</code>:表示用户不能输入的条件</p>
-<h5 id="标签-2"><a href="#标签-2" class="headerlink" title="&lt;span&gt;标签"></a><code>&lt;span&gt;标签</code></h5><p><code>&lt;span&gt;</code> 是一个 <strong>内联元素（inline element）</strong>，用于包裹文本或其他内联元素，<strong>不会独占一行</strong>。</p>
+<h5 id="lt-span-gt-标签"><a href="#lt-span-gt-标签" class="headerlink" title="&lt;span&gt;标签"></a><code>&lt;span&gt;标签</code></h5><p><code>&lt;span&gt;</code> 是一个 <strong>内联元素（inline element）</strong>，用于包裹文本或其他内联元素，<strong>不会独占一行</strong>。</p>
 <p>   它本身没有特殊的样式，主要用于<strong>分组和格式化文本</strong>。</p>
 <h4 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h4><h5 id="JavaScript中的易错点"><a href="#JavaScript中的易错点" class="headerlink" title="JavaScript中的易错点"></a>JavaScript中的易错点</h5><ol>
 <li><p>JavaScript中排序默认是字典序排序，需要按值升序则<code>array.sort((a, b) =&gt; a - b);</code></p>
 </li>
-<li><p>const和let只有块作用域，在代码块之外调用，声明let的那一行会报定义但未使用的错误，使用let的那一行会报未定义就使用的错误</br></p>
+<li><p>const和let只有块作用域，在代码块之外调用，声明let的那一行会报定义但未使用的错误，使用let的那一行会报未定义就使用的错误&lt;/br&gt;</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var a= []; </span><br><span class="line">for (var i = O; i &lt; 10; i++) &#123; </span><br><span class="line">	a [i] = function () &#123; </span><br><span class="line">	console.log(i); </span><br><span class="line">	&#125; // 存入数组 等打印时再执行</span><br><span class="line">&#125;</span><br><span class="line">a[6](); //10</span><br><span class="line"></span><br><span class="line">//上面的代码中，变量i是 var 声明的，在全局范围内都有效，所以全局只有 一个变量i。每一次循环，变量 i的值都会发生改变，而循环内，被赋给数组a //的函数内部的console.log(i)中的i 指向全局的i。也就是说，所有数组a 的成员中的i 指向的都是同一个i，导致运行时输出的是最后一轮的i 值，也//就是 10</span><br></pre></td></tr></table></figure></div>
 </li>
 <li><p>JavaScript中数组的长度<code>array.length</code>后面没括号</p>
 </li>
 <li><p>如果解决算法是一个函数实现的，其中有涉及对全局变量的使用，那么使用之前一定要先初始化</p>
 </li>
-<li><p>如果回溯时push&#x2F;pop的操作对象<code>vari</code>同时是需要返回的内容，那么上来最好先创建一个变量，<code>let shinvari=vari.slice()</code>; 并将push&#x2F;pop操作的对象转换到<code>shinvari</code></p>
+<li><p>如果回溯时push/pop的操作对象<code>vari</code>同时是需要返回的内容，那么上来最好先创建一个变量，<code>let shinvari=vari.slice()</code>; 并将push/pop操作的对象转换到<code>shinvari</code></p>
 </li>
 <li><p>二维数组的初始化</p>
-<p><code>const shinArray = Array.from(&#123;length: 行数&#125;, () =&gt; new Array(列数).fill(0)); </code></p>
+<p><code>const shinArray = Array.from(&#123;length: 行数&#125;, () =&gt; new Array(列数).fill(0));</code></p>
 <p><code>&#123;length: 行数&#125;</code> 表示生成一个长度为目标行数的空数组</p>
 <p><code>new Array(列数)</code>：为每一行创建一个长度为目标列数的新数组</p>
 </li>
@@ -371,26 +370,18 @@
 <h5 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h5><h6 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h6><p><code>continue</code>:跳过当前循环的一轮，进入下一轮</p>
 <p><code>break</code>:直接中断当前循环</p>
 <h6 id="在二维循环中"><a href="#在二维循环中" class="headerlink" title="在二维循环中"></a>在二维循环中</h6><div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> count=<span class="number">0</span>;count&lt;s.<span class="property">length</span>;count++)</span><br><span class="line">&#123;   </span><br><span class="line">    <span class="comment">// let flag=true;</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> map.<span class="title function_">values</span>())&#123;</span><br><span class="line">        <span class="keyword">if</span>(count&gt;=item[<span class="number">0</span>]&amp;&amp;count&lt;item[<span class="number">1</span>])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// ★目标位置</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// if(flag)</span></span><br><span class="line">    <span class="comment">// &#123;</span></span><br><span class="line">    res.<span class="title function_">push</span>(count-st);</span><br><span class="line">    st=count;</span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <p>如果目标位置是continue，从理论上看，这个流程控制语句将没有任何作用，因为其跳过的仅仅是内层<code>for...of...</code>的一轮，但很不巧，内层循环中没有任何操作；</p>
 <p>如果目标位置是break，那么一旦<code>count&gt;=item[0]&amp;&amp;count&lt;item[1]</code>,内层循环直接中断，进入外层循环的下一轮。但在这之前，还会执行</p>
 <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res.<span class="title function_">push</span>(count-st);</span><br><span class="line">st=count;</span><br></pre></td></tr></table></figure></div>
-
 <p>那么，有没有什么方法，在满足<code>count&gt;=item[0]&amp;&amp;count&lt;item[1]</code>时，直接进入外层循环，且内层循环后的两句不执行呢？答案是有。</p>
 <p>在ES6标准中，我们可以采用<strong>标签控制语句</strong>，即在标签前加一个标签名称，然后用continue和break实现对这个标签指代的循环的控制。以下是用标签控制语句实现上述效果的方法。</p>
 <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">outer</span>:<span class="keyword">for</span>(<span class="keyword">let</span> count=<span class="number">0</span>;count&lt;s.<span class="property">length</span>;count++)</span><br><span class="line">&#123;   </span><br><span class="line">    <span class="comment">// let flag=true;</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> map.<span class="title function_">values</span>())&#123;</span><br><span class="line">        <span class="keyword">if</span>(count&gt;=item[<span class="number">0</span>]&amp;&amp;count&lt;item[<span class="number">1</span>])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">continue</span> outer;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// if(flag)</span></span><br><span class="line">    <span class="comment">// &#123;</span></span><br><span class="line">    res.<span class="title function_">push</span>(count-st);</span><br><span class="line">    st=count;</span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-
-
-
-
 <h5 id="JavaScript中的二维数组"><a href="#JavaScript中的二维数组" class="headerlink" title="JavaScript中的二维数组"></a>JavaScript中的二维数组</h5><ol>
 <li>如果需要判定JavaScript中的一个二维数组中的一个一维数组元素是否和另一个一维数组在内容上相等，则不能直接使用 <code>二维数组.includes(一维数组)</code>，正确的做法是<code>二维数组.some(item=&gt;JSON.stringify(item)==目标数组)</code></li>
 <li>接收DFS结果的高维数组，不能直接push(低维数组)，否则传进高维数组的只是低维数组的引用，应当<code>push（[...低维数组]）</code>,或在每一轮DFS时，用slice复制参数表里的数组给新的变量，再操作这个新的变量</li>
 </ol>
 <h5 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h5><p>作为参数传递给另一个函数的函数，是<strong>被传递给其他函数并在适当时机执行的函数</strong>。</p>
 <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">greet</span>(<span class="params">name, callback</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello, &quot;</span> + name);</span><br><span class="line">  <span class="title function_">callback</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sayGoodbye</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Goodbye!&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用 greet 函数，传入回调函数 sayGoodbye</span></span><br><span class="line"><span class="title function_">greet</span>(<span class="string">&quot;Alice&quot;</span>, sayGoodbye);</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
 <p>此外，addEventListener后的不少函数也是回调函数</p>
 <h5 id="map"><a href="#map" class="headerlink" title="map"></a>map</h5><p><code>map()</code> 是数组的一个内置方法，用于对数组中的每个元素执行一个函数，并返回一个新数组。该新数组的元素是由该函数的返回值组成的。<code>map()</code> 方法不会修改原始数组，它会返回一个新的数组。例如</p>
 <p><code>res.map(item =&gt; item.text);</code></p>
@@ -399,13 +390,14 @@
 <p>将 <code>item</code> 对象中的 <code>answer</code> 属性的值赋给新对象的 <code>hisdata</code> 属性。</p>
 <p><code>(&#123; hisdata: item.answer &#125;)</code> 表示返回一个新的对象，<code>hisdata</code> 属性的值来自 <code>item.answer</code></p>
 <h5 id="bug-and-debug"><a href="#bug-and-debug" class="headerlink" title="bug and debug"></a>bug and debug</h5><ol>
-<li><p>出现<code>throw new TypeError( serialize (ret)+&quot; is not valid value for the expected return type integer&#39;); TypeError: null is not valid value for the expected return type integer</code></p>
+<li><p>出现<code>throw new TypeError( serialize (ret)+&quot; is not valid value for the expected return type integer&#39;);
+TypeError: null is not valid value for the expected return type integer</code></p>
 <p>可能是出现了数组越界</p>
 </li>
 <li></li>
 </ol>
 <h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><ol>
-<li><p>如果CSS放在了src下，那么import的相对路径就是相对src的路径</br><br>如CSS的路径：<code>E:\projects with vscode\web\VUE\spark-labelin2d\labelin2d\src\assets\css\main.css</code></br><br>vue的调用：</p>
+<li><p>如果CSS放在了src下，那么import的相对路径就是相对src的路径&lt;/br&gt;<br>如CSS的路径：<code>E:\projects with vscode\web\VUE\spark-labelin2d\labelin2d\src\assets\css\main.css</code>&lt;/br&gt;<br>vue的调用：</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style scoped&gt;</span><br><span class="line">@import&#x27;./assets/css/main.css&#x27;;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></div>
 </li>
 <li><p>如果报<code>Can&#39;t resolve &#39;sass-loader&#39;</code>错误，表明缺少sass-loader包，可先用<code>npm ls sass-loader</code>命令进行确定，如果报错或报空，则先<code>npm install --save-dev node-sass</code>后<code>npm install --save-dev sass-loader</code>，后者装的依赖于前者其中<code>--save-dev</code>表示将要安装的包作为开发依赖（development dependency）保存到项目的 package.json 文件中。开发依赖是项目开发阶段所需要的包，在项目打包发布时通常不会包含。</p>
@@ -413,22 +405,18 @@
 </ol>
 <h5 id="元素排布"><a href="#元素排布" class="headerlink" title="元素排布"></a>元素排布</h5><p><code>display: flex;</code> </p>
 <p>设置父元素的布局为 <strong>Flexbox 布局</strong>，使得它的直接子元素成为 <strong>Flex 容器</strong>，从而可以使用 Flexbox 的对齐属性。</p>
-<p>**<code>align-items: center;</code>**：将 <strong>子元素</strong> 在容器的 <strong>垂直方向</strong>（交叉轴）上居中对齐。</p>
-<p>**<code>justify-content: center;</code>**：将 <strong>子元素</strong> 在容器的 <strong>水平方向</strong>（主轴）上居中对齐。</p>
-<p>**<code>justify-content: space-between;</code>**：将子元素在主轴上（通常是水平方向）均匀分布，第一个子元素靠左，最后一个子元素靠右，中间的元素平均分布。</p>
+<p><strong><code>align-items: center;</code></strong>：将 <strong>子元素</strong> 在容器的 <strong>垂直方向</strong>（交叉轴）上居中对齐。</p>
+<p><strong><code>justify-content: center;</code></strong>：将 <strong>子元素</strong> 在容器的 <strong>水平方向</strong>（主轴）上居中对齐。</p>
+<p><strong><code>justify-content: space-between;</code></strong>：将子元素在主轴上（通常是水平方向）均匀分布，第一个子元素靠左，最后一个子元素靠右，中间的元素平均分布。</p>
 <h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3><ol>
-<li>app.vue一般不用来写页面，用它写页面跳转到其他页面时会带有这个页面。涉及跳转时，一般将<code> &lt;router-view&gt; &lt;/router-view&gt;</code><br>写在app.vue中。在多页面中，第一个页面也就是路由表的第一项。</li>
+<li>app.vue一般不用来写页面，用它写页面跳转到其他页面时会带有这个页面。涉及跳转时，一般将<code>&lt;router-view&gt; &lt;/router-view&gt;</code><br>写在app.vue中。在多页面中，第一个页面也就是路由表的第一项。</li>
 <li>页面名字必须俩单词</li>
 </ol>
 <h3 id="CSS-for-vue"><a href="#CSS-for-vue" class="headerlink" title="CSS for vue"></a>CSS for vue</h3><p><strong><code>:class</code></strong> 是 Vue 的 <strong>动态类绑定</strong>，可以根据条件 <strong>动态地添加或删除类</strong></p>
 <p>模板：<code>:class=&quot;&#123; &#39;动态绑定类名&#39;: 判定条件&#125;&quot;</code></p>
 <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:<span class="keyword">class</span>=<span class="string">&quot;&#123; &#x27;img-item-active&#x27;: curPic == item.id &#125;&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-
-
 <h3 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h3><p>计算属性的计算结果会被缓存，只有当其依赖的数据发生变化时才会重新计算。普通属性每次被访问时，都会执行它们的定义逻辑，无论依赖的数据是否变化。它们不具备缓存机制，因此每次调用时都需要重新计算。<br>一个例子</p>
 <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">b</span>: <span class="number">2</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="attr">computed</span>: &#123;</span><br><span class="line">  <span class="title function_">sum</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">a</span> + <span class="variable language_">this</span>.<span class="property">b</span>; <span class="comment">// 只有 a 或 b 改变时，sum 才会重新计算</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
 <p>普通属性可以通过 <code>data</code> 或 <code>methods</code> 来定义。</p>
 <p>在 <code>data</code> 中，普通属性通常是直接的数据存储。</p>
 <p>在 <code>methods</code> 中，普通属性是函数，每次调用时都会执行。</p>
@@ -440,15 +428,14 @@
 <li><strong>v-on绑定input事件监听到函数中，函数会获取最新的值赋值到绑定的属性中；</strong></li>
 </ol>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">// 绑定textarea </span><br><span class="line">  &lt;div class=&quot;demo&quot;&gt;</span><br><span class="line">    &lt;textarea v-model=&quot;article&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt; &lt;/textarea&gt;</span><br><span class="line">    &lt;h2&gt;article当前的值是：&#123;&#123; article &#125;&#125;&lt;/h2&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">  name: &#x27;demo&#x27;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      article: &quot;a&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">//这时候，输入的内容会同步到article当前值里</span><br><span class="line">// 绑定多选框</span><br><span class="line">&lt;!-- 一般对应数组类型 --&gt;</span><br><span class="line">      &lt;input type=&quot;checkbox&quot; v-model=&quot;sport&quot; value=&quot;篮球&quot; /&gt;篮球</span><br><span class="line">      &lt;input type=&quot;checkbox&quot; v-model=&quot;sport&quot; value=&quot;足球&quot; /&gt;足球</span><br><span class="line">      &lt;input type=&quot;checkbox&quot; v-model=&quot;sport&quot; value=&quot;羽毛球球&quot; /&gt;羽毛球球</span><br><span class="line">      &lt;input type=&quot;checkbox&quot; v-model=&quot;sport&quot; value=&quot;兵乓球&quot; /&gt;兵乓球</span><br><span class="line">      您的爱好有：&#123;&#123; sport &#125;&#125;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#x27;demo&#x27;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      message: &quot;内容&quot;,</span><br><span class="line">      sex: &#x27;&#x27;,</span><br><span class="line">      // 当要 默认选中时要填入值即可 例：sex=&#x27;男&#x27;</span><br><span class="line">      // agree: false,</span><br><span class="line">      sport: [],</span><br><span class="line">      // fruits: &#x27;&#x27;,</span><br><span class="line">      // fruits2: [],</span><br><span class="line">      // hobbies: [],</span><br><span class="line">      // origintobbies: [&quot;篮球&quot;, &quot;足球&quot;, &quot;乒乓球&quot;, &quot;羽毛球&quot;, &quot;桌球&quot;],</span><br><span class="line">      // age: 0,</span><br><span class="line">      // name: &#x27;&#x27;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 绑定select（下拉选择）</span><br><span class="line">&lt;select name=&quot;abc&quot; v-model=&quot;fruits2&quot; multiple&gt;</span><br><span class="line">        &lt;option value=&quot;香蕉&quot;&gt;香蕉&lt;/option&gt;</span><br><span class="line">        &lt;option value=&quot;苹果&quot;&gt;苹果&lt;/option&gt;</span><br><span class="line">        &lt;option value=&quot;橙子&quot;&gt;橙子&lt;/option&gt;</span><br><span class="line">        &lt;option value=&quot;榴莲&quot;&gt;榴莲&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#x27;demo&#x27;,</span><br><span class="line">  data () &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">       message: &quot;内容&quot;,</span><br><span class="line">       sex: &#x27;&#x27;,</span><br><span class="line">      //  当要 默认选中时要填入值即可 例：sex=&#x27;男&#x27;,</span><br><span class="line">       agree: false,</span><br><span class="line">       sport: [],</span><br><span class="line">      fruits: &#x27;&#x27;,</span><br><span class="line">       fruits2: [],</span><br><span class="line">       hobbies: [],</span><br><span class="line">       origintobbies: [&quot;篮球&quot;, &quot;足球&quot;, &quot;乒乓球&quot;, &quot;羽毛球&quot;, &quot;桌球&quot;],</span><br><span class="line">       age: 0,</span><br><span class="line">       name: &#x27;&#x27;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
 <p>注意：</p>
 <pre><code>   1. 无论输入的type为什么样，v-model绑的都是string类型，如果需要化成数字类型，需要`v-model.number`
    1. `v-model.lazy`得话，则需要当前输入完，提交之后才能实现同步
-</code></pre>
-<h3 id="elementUI的使用"><a href="#elementUI的使用" class="headerlink" title="elementUI的使用"></a>elementUI的使用</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p><code>import &quot;element-ui/lib/theme-chalk/index.css&quot;; import ElementUI from &#39;element-ui&#39;;//中间这一行甚至不用写，因为vue会自己生成 Vue.use(ElementUI)</code></p>
+</code></pre><h3 id="elementUI的使用"><a href="#elementUI的使用" class="headerlink" title="elementUI的使用"></a>elementUI的使用</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p><code>import &quot;element-ui/lib/theme-chalk/index.css&quot;;
+import ElementUI from &#39;element-ui&#39;;//中间这一行甚至不用写，因为vue会自己生成
+Vue.use(ElementUI)</code></p>
 <h4 id="如何引入"><a href="#如何引入" class="headerlink" title="如何引入"></a>如何引入</h4><p>在<code>main.js</code>中，</p>
 <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">ElementUI</span> <span class="keyword">from</span> <span class="string">&#x27;element-ui&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;element-ui/lib/theme-chalk/index.css&#x27;</span>;</span><br></pre></td></tr></table></figure></div>
-
 <h5 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h5><p>1.在项目中，如果有出现<code>this.$message</code>,<code>this.$confirm</code>这种用法，很可能是使用了elementUI,如果触发了相应的事件但没反应，那么可以考虑安装elementUI</p>
 <h4 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h4><h5 id="返回箭头"><a href="#返回箭头" class="headerlink" title="返回箭头"></a>返回箭头</h5><p>在返回标签中加入<code>&lt;i class=&quot;el-icon-back&quot;&gt;&lt;/i&gt;</code>,这里的i用于显示一个图标</p>
 <h5 id="el-button"><a href="#el-button" class="headerlink" title="el-button"></a>el-button</h5><p><code>round</code>属性表示将边框设置为圆角样式</p>
@@ -467,38 +454,34 @@
 <p><code>:modal</code>:表示遮罩层是否显示（也就是抽屉拉开以后其他地方会不会在阴影里）</p>
 <p><code>:wrapperClosable</code>是否可以点击抽屉以外区域关闭抽屉</p>
 <h5 id="el-tooltip"><a href="#el-tooltip" class="headerlink" title="el-tooltip"></a>el-tooltip</h5><p>工具提示组件，用于显示 <strong>浮动提示框</strong>，通常用于提示用户一些操作说明或快捷键。</p>
-<p>**<code>effect</code>**：设置工具提示的效果。<code>light</code> 表示 <strong>亮色效果</strong>，还有 <code>dark</code>（深色效果）。</p>
-<p>**<code>content=&quot;&quot;</code>**：设置工具提示的内容为 ，即用户鼠标悬停时会看到的提示 ，通常用来显示快捷键或提示信息。</p>
+<p><strong><code>effect</code></strong>：设置工具提示的效果。<code>light</code> 表示 <strong>亮色效果</strong>，还有 <code>dark</code>（深色效果）。</p>
+<p><strong><code>content=&quot;&quot;</code></strong>：设置工具提示的内容为 ，即用户鼠标悬停时会看到的提示 ，通常用来显示快捷键或提示信息。</p>
 <p><strong><code>placement</code>：</strong>设置工具提示的位置</p>
 <h5 id="提示弹窗"><a href="#提示弹窗" class="headerlink" title="提示弹窗"></a>提示弹窗</h5><div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.$confirm(<span class="string">&quot;还未保存是否退出?&quot;</span>, <span class="string">&quot;左上角内容&quot;</span>, &#123;</span><br><span class="line">    <span class="attr">confirmButtonText</span>: <span class="string">&quot;确定按钮内容&quot;</span>,</span><br><span class="line">    <span class="attr">cancelButtonText</span>: <span class="string">&quot;取消按钮内容&quot;</span>,</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&quot;warning&quot;</span>,</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure></div>
-
-
-
 <h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><h5 id="v-loading"><a href="#v-loading" class="headerlink" title="v-loading"></a>v-loading</h5><p><code>v-loading=&quot;loading&quot;</code>：<code>loading</code> 是一个布尔值变量，决定是否显示加载动画。<code>true</code> 显示加载，<code>false</code> 则隐藏</p>
 <h2 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h2><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><h4 id="应用生命周期（App-）"><a href="#应用生命周期（App-）" class="headerlink" title="应用生命周期（App()）"></a><strong>应用生命周期</strong>（<code>App()</code>）</h4><p>应用生命周期函数在整个小程序的生命周期中执行。</p>
 <ul>
-<li>**<code>onLaunch(options)</code>**：小程序启动时触发，通常用来做一些初始化工作，如获取系统信息、登录等操作。</li>
-<li>**<code>onShow(options)</code>**：小程序从后台进入前台时触发。</li>
-<li>**<code>onHide()</code>**：小程序进入后台时触发。</li>
-<li>**<code>onError(error)</code>**：小程序发生脚本错误或 API 调用失败时触发。</li>
+<li><strong><code>onLaunch(options)</code></strong>：小程序启动时触发，通常用来做一些初始化工作，如获取系统信息、登录等操作。</li>
+<li><strong><code>onShow(options)</code></strong>：小程序从后台进入前台时触发。</li>
+<li><strong><code>onHide()</code></strong>：小程序进入后台时触发。</li>
+<li><strong><code>onError(error)</code></strong>：小程序发生脚本错误或 API 调用失败时触发。</li>
 </ul>
 <h4 id="页面生命周期（Page-）"><a href="#页面生命周期（Page-）" class="headerlink" title="页面生命周期（Page()）"></a><strong>页面生命周期</strong>（<code>Page()</code>）</h4><p>页面生命周期函数适用于页面组件，控制页面的生命周期。</p>
 <ul>
-<li>**<code>onLoad(options)</code>**：页面加载时触发，通常用来初始化页面的数据。</li>
-<li>**<code>onShow()</code>**：页面显示时触发，页面每次显示时都会调用。</li>
-<li>**<code>onReady()</code>**：页面首次渲染完成后触发。</li>
-<li>**<code>onHide()</code>**：页面隐藏时触发。</li>
-<li>**<code>onUnload()</code>**：页面卸载时触发，通常用来做资源清理等。</li>
-<li>**<code>onPullDownRefresh()</code>**：页面下拉刷新时触发。</li>
-<li>**<code>onReachBottom()</code>**：页面触底时触发。</li>
-<li>**<code>onShareAppMessage()</code>**：页面被分享时触发。</li>
+<li><strong><code>onLoad(options)</code></strong>：页面加载时触发，通常用来初始化页面的数据。</li>
+<li><strong><code>onShow()</code></strong>：页面显示时触发，页面每次显示时都会调用。</li>
+<li><strong><code>onReady()</code></strong>：页面首次渲染完成后触发。</li>
+<li><strong><code>onHide()</code></strong>：页面隐藏时触发。</li>
+<li><strong><code>onUnload()</code></strong>：页面卸载时触发，通常用来做资源清理等。</li>
+<li><strong><code>onPullDownRefresh()</code></strong>：页面下拉刷新时触发。</li>
+<li><strong><code>onReachBottom()</code></strong>：页面触底时触发。</li>
+<li><strong><code>onShareAppMessage()</code></strong>：页面被分享时触发。</li>
 </ul>
-<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p><code>git remote -v</code>查看远程仓库</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">origin  https://github.com/sparkFlare/spark-vue.git (fetch)</span><br><span class="line">origin  https://github.com/sparkFlare/spark-vue.git (push)</span><br></pre></td></tr></table></figure></div>
-<p><code>git checkout 分支名</code>切换到某个分支<br><code>git status</code>查看状态<br><code>git branch</code>查看分支<br><code>git checkout -b 新分支名</code>以当前分支为基础新建分支<br><code>git push -u origin 新分支名</code>推送新建分支时，在远端新建此仓库<br>交代码<br><code>git commit -m &quot;注释内容&quot;</code>(提交到仓库区) 将暂存区中的所有内容提交到本地仓库。<br><code>git add .</code>将工作区（Working Directory）中所有被修改、新增的文件添加到暂存区（Staging Area）<br><code>git push</code>发射</p>
-<h5 id="创建一个新仓库，并把本地的代码传上去"><a href="#创建一个新仓库，并把本地的代码传上去" class="headerlink" title="创建一个新仓库，并把本地的代码传上去"></a>创建一个新仓库，并把本地的代码传上去</br></h5><p>1.<br><code>git config user.name &quot;用户名&quot;</code><br><code>git config user.email &quot;邮箱&quot;</code><br><code>ssh-keygen -t rsa -C &quot;邮箱名&quot;</code><br>这一步记得先在某个目录下创建一个ssh用于承接公钥<br>复制gitsshkey.pub里的所有内容到GitHub的NEW SSH KEY</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">// 去除不想上传的文件 git rm --cached &lt;文件名&gt;</span><br><span class="line">git commit -m &quot;备注&quot;</span><br><span class="line">git branch -M 更改本地分支名</span><br><span class="line">git remote add origin 远程地址</span><br><span class="line">git remote set-url origin 远程地址</span><br><span class="line">//这是重设地址</span><br><span class="line">#6</span><br><span class="line">git push -u origin 分支名</span><br><span class="line">//最后一条新分支也可以用</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p><code>git remote -v</code>查看远程仓库<br><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">origin  https://github.com/sparkFlare/spark-vue.git (fetch)</span><br><span class="line">origin  https://github.com/sparkFlare/spark-vue.git (push)</span><br></pre></td></tr></table></figure></div><br><code>git checkout 分支名</code>切换到某个分支<br><code>git status</code>查看状态<br><code>git branch</code>查看分支<br><code>git checkout -b 新分支名</code>以当前分支为基础新建分支<br><code>git push -u origin 新分支名</code>推送新建分支时，在远端新建此仓库<br>交代码<br><code>git commit -m &quot;注释内容&quot;</code>(提交到仓库区) 将暂存区中的所有内容提交到本地仓库。<br><code>git add .</code>将工作区（Working Directory）中所有被修改、新增的文件添加到暂存区（Staging Area）<br><code>git push</code>发射</p>
+<h5 id="创建一个新仓库，并把本地的代码传上去-lt-br-gt"><a href="#创建一个新仓库，并把本地的代码传上去-lt-br-gt" class="headerlink" title="创建一个新仓库，并把本地的代码传上去&lt;/br&gt;"></a>创建一个新仓库，并把本地的代码传上去&lt;/br&gt;</h5><ol>
+<li><code>git config user.name &quot;用户名&quot;</code><br><code>git config user.email &quot;邮箱&quot;</code><br><code>ssh-keygen -t rsa -C &quot;邮箱名&quot;</code><br>这一步记得先在某个目录下创建一个ssh用于承接公钥<br>复制gitsshkey.pub里的所有内容到GitHub的NEW SSH KEY<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">// 去除不想上传的文件 git rm --cached &lt;文件名&gt;</span><br><span class="line">git commit -m &quot;备注&quot;</span><br><span class="line">git branch -M 更改本地分支名</span><br><span class="line">git remote add origin 远程地址</span><br><span class="line">git remote set-url origin 远程地址</span><br><span class="line">//这是重设地址</span><br><span class="line">#6</span><br><span class="line">git push -u origin 分支名</span><br><span class="line">//最后一条新分支也可以用</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+</li>
+</ol>
 <h4 id="debug-1"><a href="#debug-1" class="headerlink" title="debug"></a>debug</h4><p><code>git config --global http.sslVerify false</code></p>
 
 		</div>

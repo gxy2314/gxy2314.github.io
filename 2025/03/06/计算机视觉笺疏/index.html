@@ -321,20 +321,20 @@
 			<h2 id="在计算机视觉看数学"><a href="#在计算机视觉看数学" class="headerlink" title="在计算机视觉看数学"></a>在计算机视觉看数学</h2><h4 id="外积"><a href="#外积" class="headerlink" title="外积"></a>外积</h4><p> <strong>外积 (Outer Product)</strong></p>
 <p>​    <strong>操作对象：</strong> 两个向量（一个列向量和一个行向量）。</p>
 <p>​    <strong>结果：</strong> 一个矩阵。</p>
-<p>​	<strong>用途：</strong> 将两个低维向量“扩展”成一个高维矩阵。在图像处理中，它用于<strong>构造</strong>可分离的二维卷积核，即把一个一维的平滑核和一个一维的差分核组合成一个二维的边缘检测核。</p>
-<p>​	<strong>数学表示：</strong> u⊗vT 或 uvT</p>
-<p>​	<strong>核心思想：</strong> 元素级别的乘积，每个元素都是两个输入向量中对应元素的乘积。</p>
+<p>​    <strong>用途：</strong> 将两个低维向量“扩展”成一个高维矩阵。在图像处理中，它用于<strong>构造</strong>可分离的二维卷积核，即把一个一维的平滑核和一个一维的差分核组合成一个二维的边缘检测核。</p>
+<p>​    <strong>数学表示：</strong> u⊗vT 或 uvT</p>
+<p>​    <strong>核心思想：</strong> 元素级别的乘积，每个元素都是两个输入向量中对应元素的乘积。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20250609151648989.png"
+                     data-src="\计算机视觉笺疏\image-20250609151648989.png"
                       alt="image-20250609151648989"
                 ></p>
-<p>​	$tan^{−1}$&#x3D;$arctan$</p>
+<p>​    $tan^{−1}$=$arctan$</p>
 <h4 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h4><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20250610151727902.png"
+                     data-src="\计算机视觉笺疏\image-20250610151727902.png"
                       alt="image-20250610151727902"
                 ></p>
 <h2 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h2><blockquote>
@@ -348,22 +348,22 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304094457444.png"
+                     data-src="\计算机视觉笺疏\image-20230304094457444.png"
                       alt="3*3大小的平均核"
                 ></p>
 <p>使用卷积核对图像进行卷积，在卷积之前一定要对其进行翻转（不翻转会导致相关），定义f是图像，g是卷积核，对图像进行卷积操作的表达式为</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304094743049.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230304094743049.png"
+                      alt=""
                 ></p>
 <p>式子中，(m,n)表示正在进行卷积的图像f上的点坐标，(k,l)表示卷积核g上的相对坐标</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304095032190.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230304095032190.png"
+                      alt=""
                 ></p>
 <blockquote>
 <p>PS：要保证卷积图像和原图一样大，则需要提前对原图进行填充，常用的方法是周围补0、边缘填充、镜像填充…无论如何，填充的结果都是为了保证输入和输出大小固定</p>
@@ -372,35 +372,35 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304095346897.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230304095346897.png"
+                      alt=""
                 ></p>
 <h3 id="1-3-卷积的功能"><a href="#1-3-卷积的功能" class="headerlink" title="1.3 卷积的功能"></a>1.3 卷积的功能</h3><p>前面我们通过平均核对图像进行平滑降噪引入了卷积核的概念，事实上不同的卷积核作用也不同</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304095719013.png"
+                     data-src="\计算机视觉笺疏\image-20230304095719013.png"
                       alt="原图核"
                 ></p>
 <p>​            </p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304095735771.png"
+                     data-src="\计算机视觉笺疏\image-20230304095735771.png"
                       alt="左移核"
                 ></p>
 <p>​               </p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304095754127.png"
+                     data-src="\计算机视觉笺疏\image-20230304095754127.png"
                       alt="平滑核"
                 ></p>
 <p>​                </p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304095821337.png"
+                     data-src="\计算机视觉笺疏\image-20230304095821337.png"
                       alt="锐化核"
                 ></p>
 <p>​                  锐化核</p>
@@ -408,27 +408,27 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304100121611.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230304100121611.png"
+                      alt=""
                 ></p>
 <p>我们希望模板的效果是这样，中心的点权值大，边缘的权值小（边缘对中心的影响太大肯定是不好的）</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304100204523.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230304100204523.png"
+                      alt=""
                 ></p>
 <p>如何得到上述模板呢？这里引入二维高斯函数，我们称由高斯函数产生的模板为高斯核（其中(x,y)是模板的位置坐标，方差和模板大小由人为规定）</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304100422403.png"
+                     data-src="\计算机视觉笺疏\image-20230304100422403.png"
                       alt="二维高斯函数"
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304100558725.png"
+                     data-src="\计算机视觉笺疏\image-20230304100558725.png"
                       alt="高斯核"
                 ></p>
 <blockquote>
@@ -453,32 +453,32 @@
 <p>第二点和第三点特性都表达了这样一个事情 – 一个大的高斯核可以拆分为两个小的高斯核，这意味着拆分后会大大减少图像运算的时间复杂度，这也是对图像进行卷积计算中常用的一种优化方式</p>
 <h4 id="锐化核"><a href="#锐化核" class="headerlink" title="锐化核"></a>锐化核</h4><p>简单理解锐化核：</p>
 <ul>
-<li>原图-平滑图&#x3D;边缘图</li>
-<li>原图+边缘图&#x3D;锐化图</li>
-<li>故 2脉冲核-平滑核&#x3D;锐化核（分配律）</li>
+<li>原图-平滑图=边缘图</li>
+<li>原图+边缘图=锐化图</li>
+<li>故 2脉冲核-平滑核=锐化核（分配律）</li>
 </ul>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304102604511.png"
+                     data-src="\计算机视觉笺疏\image-20230304102604511.png"
                       alt="锐化核的推导过程"
                 ></p>
-<p>​																		锐化核的推导过程</p>
+<p>​                                                                        锐化核的推导过程</p>
 <p>其中α是锐化因子，表示对图像进行锐化处理的程度，e是脉冲模板，g是平滑模板</p>
 <h3 id="1-4-噪声处理"><a href="#1-4-噪声处理" class="headerlink" title="1.4 噪声处理"></a>1.4 噪声处理</h3><p>前面介绍了可以使用卷积核来去除噪声，下面详细介绍一下对不同的噪声具体如何选择卷积核进行处理；</p>
 <p>噪声一般分为三种，椒盐噪声（黑白），脉冲噪声（全白点），高斯噪声（每个点叠加符合独立正态分布的噪声变量产生）；</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304101610881.png"
+                     data-src="\计算机视觉笺疏\image-20230304101610881.png"
                       alt="不同种类的噪声"
                 ><br>                                     不同种类的噪声</p>
 <p>高斯核主要用于去除高斯噪声（对于方差越小的高斯噪声去噪效果越好）</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304101915781.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230304101915781.png"
+                      alt=""
                 >当噪声方差较小的时候使用方差较小的高斯核就可以滤波，反之就需要方差较大的模板才行</p>
 <ul>
 <li>高斯滤波器的问题：去除噪声的同时边缘也被平滑了，且高斯模板的方差越大平滑效果越明显</li>
@@ -488,15 +488,15 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304102131279.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230304102131279.png"
+                      alt=""
                 ></p>
 <p>为什么使用中值滤波器去除椒盐噪声能够取得较好的效果呢？ – 因为使用中值滤波器不会给图像产生任何新的像素值，而如果使用平均值会导致图像出现从未有过的新的像素点</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304102301775.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230304102301775.png"
+                      alt=""
                 ></p>
 <ul>
 <li>实际上，中值滤波对椒盐噪声和白噪声都非常有效</li>
@@ -518,7 +518,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304102831695.png"
+                     data-src="\计算机视觉笺疏\image-20230304102831695.png"
                       alt="边的分类"
                 ></p>
 <p>深度不连续性是三维几何属性，而非直接的二维图像属性</p>
@@ -530,153 +530,149 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304103007225.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230304103007225.png"
+                      alt=""
                 ></p>
 <p>在二维空间中的偏导数计算公式如下</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304103101964.png"
+                     data-src="\计算机视觉笺疏\image-20230304103101964.png"
                       alt="导数的数学公式"
                 ></p>
 <p>显然上述公式不容易计算，计算机视觉中对上述式子进行改进得到近似导数</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304103142623.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230304103142623.png"
+                      alt=""
                 ></p>
 <p>针对上述公式，边缘提取的任务恰好可以用卷积来计算 – 对x方向的偏导数和y方向的偏导数分别用x方向的卷积核((-1,1)表示自身为负，右边为正)和y方向的卷积核表示</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304103305714.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230304103305714.png"
+                      alt=""
                 ></p>
-<p>​          $Output(x,y)&#x3D;Image(x+1,y)−Image(x,y)$</p>
+<p>​          $Output(x,y)=Image(x+1,y)−Image(x,y)$</p>
 <h3 id="2-2-有限差分滤波器"><a href="#2-2-有限差分滤波器" class="headerlink" title="2.2 有限差分滤波器"></a>2.2 有限差分滤波器</h3><p>事实上除了最简单的x方向和y方向的卷积核，还有如下不同算子定义的模板</p>
 <h4 id="2-2-1-Prewitt算子"><a href="#2-2-1-Prewitt算子" class="headerlink" title="2.2.1 Prewitt算子"></a>2.2.1 Prewitt算子</h4><p>倾向于检测出<strong>更粗、更连贯的边缘</strong></p>
 <p>$Mx $(或 $Px$)：用于检测图像在水平方向（x 方向）的梯度。</p>
-<p>​        它计算图像像素在其右侧和左侧邻域的加权差。中间一列为0，表示不考虑中心像素所在列对水平梯度的直接贡献。上下两行的-1和1则考虑了__垂直方向__上对水平边缘的平滑。(相当于在<strong>垂直方向（y方向）上对边缘信息进行了加权平均</strong>。)</p>
+<p>​        它计算图像像素在其右侧和左侧邻域的加权差。中间一列为0，表示不考虑中心像素所在列对水平梯度的直接贡献。上下两行的-1和1则考虑了<strong>垂直方向</strong>上对水平边缘的平滑。(相当于在<strong>垂直方向（y方向）上对边缘信息进行了加权平均</strong>。)</p>
 <p>$My$ (或 $Py$)：用于检测图像在垂直方向（y 方向）的梯度。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310224854849.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310224854849.png"
+                      alt=""
                 ></p>
 <p>对于单个区域的噪声点不太敏感，中间为0表示用左边和右边的差异来衡量本身是否是梯度，同时利用多个像素相减可以对单个噪声点的影响进行平均；</p>
 <h4 id="2-2-2-Sobel算子"><a href="#2-2-2-Sobel算子" class="headerlink" title="2.2.2 Sobel算子"></a>2.2.2 Sobel算子</h4><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310225011122.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310225011122.png"
+                      alt=""
                 ></p>
 <p>这个核是可分离的，先高斯平滑再边缘提取，该算子对噪声的敏感程度更低；</p>
-<p><strong>为什么说是可分离</strong>			<img  
+<p><strong>为什么说是可分离</strong>            <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20250609150940008.png"
+                     data-src="\计算机视觉笺疏\image-20250609150940008.png"
                       alt="image-20250609150940008"
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20250609151106114.png"
+                     data-src="\计算机视觉笺疏\image-20250609151106114.png"
                       alt="image-20250609151106114"
                 ></p>
 <p>Sobel 算子在 Prewitt 算子的基础上增加了权重的概念，认为相邻点的距离远近对当前像素点的影响是不同的，距离越近的像素点对应当前像素的影响越大，从而实现图像锐化并突出边缘轮廓；</p>
 <h4 id="2-2-3-Roberts算子"><a href="#2-2-3-Roberts算子" class="headerlink" title="2.2.3 Roberts算子"></a>2.2.3 Roberts算子</h4><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310225041751.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310225041751.png"
+                      alt=""
                 ></p>
 <p>检测模板检测的信号和模板垂直，Mx检测135°的信号，My检测45°的信号；</p>
 <h3 id="2-3-图像梯度"><a href="#2-3-图像梯度" class="headerlink" title="2.3 图像梯度"></a>2.3 图像梯度</h3><p>在高数中我们知道梯度表示方向导数最大的向量，在图像中梯度指向强度增长最快（信号变化最大）的方向</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304103637279.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230304103637279.png"
+                      alt=""
                 ></p>
 <p>梯度的方向与边缘垂直，梯度的模值代表了是边缘的可能性大小</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304103542709.png"
+                     data-src="\计算机视觉笺疏\image-20230304103542709.png"
                       alt="梯度的方向"
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230304103558036.png"
+                     data-src="\计算机视觉笺疏\image-20230304103558036.png"
                       alt="梯度的模值"
                 ></p>
 <h3 id="2-4-高斯偏导核"><a href="#2-4-高斯偏导核" class="headerlink" title="2.4 高斯偏导核"></a>2.4 高斯偏导核</h3><p><strong>在有噪声的图像中直接计算梯度会产生非常嘈杂的结果，因此需要先进行平滑处理，而高斯偏导核将平滑和求导结合在一个操作中，提高了效率和鲁棒性。</strong></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310225648851.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310225648851.png"
+                      alt=""
                 ></p>
 <p>如果对上述图像直接用边缘提取会得到下面的图像（因为每个点周围的信号浮动都较大），我们无法得到边缘的信息</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310225703475.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310225703475.png"
+                      alt=""
                 ></p>
-<p>出现上述情况的原因是原始信号有噪声，因此在对原始信号求偏导之前需要使用高斯平滑核进行平滑去噪，如果用g表示高斯平滑核，则需要对图像进行两次卷积d(f*g)&#x2F;dx，能否转换为只对图像进行一次处理？</p>
+<p>出现上述情况的原因是原始信号有噪声，因此在对原始信号求偏导之前需要使用高斯平滑核进行平滑去噪，如果用g表示高斯平滑核，则需要对图像进行两次卷积d(f*g)/dx，能否转换为只对图像进行一次处理？</p>
 <p><strong>为什么会有两次卷积</strong></p>
-<img  
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250609180421786.png"
                       alt="image-20250609180421786" style="zoom:80%;" 
-                >
-
-<p>利用卷积的运算性质可以交换得到f*(dg&#x2F;dx)，其中的dg&#x2F;dx我们称为高斯偏导核</p>
-<img  
+                ></p>
+<p>利用卷积的运算性质可以交换得到f*(dg/dx)，其中的dg/dx我们称为高斯偏导核</p>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250609180511668.png"
                       alt="image-20250609180511668" style="zoom:80%;" 
-                >
-
-
-
-
-
+                ></p>
 <hr>
 <blockquote>
 <p>Q：为什么使用高斯偏导核更快？</p>
 </blockquote>
-<p>A：dg&#x2F;dx是高斯偏导模板，相比于f作卷积操作快得多，用算出来的高斯偏导模板与图像进行卷积，此时图像f就只会被操作一次；</p>
+<p>A：dg/dx是高斯偏导模板，相比于f作卷积操作快得多，用算出来的高斯偏导模板与图像进行卷积，此时图像f就只会被操作一次；</p>
 <hr>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310230313848.png"
+                     data-src="\计算机视觉笺疏\image-20230310230313848.png"
                       alt="高斯偏导核_三维"
                 ></p>
 <p>高斯偏导核是不可分离的，因为高斯g求偏导后的结果会多出一项（与高斯平滑核的区别之一）</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310230429298.png"
+                     data-src="\计算机视觉笺疏\image-20230310230429298.png"
                       alt="高斯偏导核_二维"
                 ></p>
 <p>二维图像中，白色为正，黑色为负，值越大；颜色越深，卷积核的数值变化与其衡量的信号垂直；</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
 <th>高斯平滑核</th>
-<th>高斯卷积核&#x2F;偏导核</th>
+<th>高斯卷积核/偏导核</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>目标：去除高频噪声</td>
 <td>目标：边缘检测，提取边缘信息</td>
 </tr>
@@ -688,7 +684,9 @@
 <td>高斯平滑核加权求和的结果为1（否则对图像信号放大或缩小）</td>
 <td>高斯偏导核求和结果为0（否则对平坦的区域卷积后结果非0表示有边，矛盾）</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>通过增大高斯偏导核的标准差(标准差是方差的算术平方根)，可以使得图像呈现不同的结果，标准差越大滤波后的细节信息丢失的越多（对于不同的任务细节信息的重要性不同） ；</p>
 <h3 id="2-5-Canny边缘提取算法"><a href="#2-5-Canny边缘提取算法" class="headerlink" title="2.5 Canny边缘提取算法"></a>2.5 Canny边缘提取算法</h3><p>Canny边缘提取算法是一个经典的边缘提取算法，主要贡献是双门限和非最大化抑制思想；</p>
 <blockquote>
@@ -702,7 +700,7 @@
 </li>
 <li><strong>噪声类型不匹配：</strong><ul>
 <li>高斯核对于去除<strong>高斯噪声</strong>（服从正态分布的噪声）效果最好。</li>
-<li>但如果图像中存在其他类型的噪声，例如**椒盐噪声（salt-and-pepper noise）**或**脉冲噪声**，高斯核的平滑效果可能就不那么理想。这些噪声点可能会以较大的强度出现在图像中，即使经过高斯平滑，仍然可能产生足以被检测为“边缘”的局部梯度。</li>
+<li>但如果图像中存在其他类型的噪声，例如<strong>椒盐噪声（salt-and-pepper noise）\</strong>或*<em>脉冲噪声*</em>，高斯核的平滑效果可能就不那么理想。这些噪声点可能会以较大的强度出现在图像中，即使经过高斯平滑，仍然可能产生足以被检测为“边缘”的局部梯度。</li>
 </ul>
 </li>
 <li><strong>强纹理被误认为是边缘：</strong><ul>
@@ -730,8 +728,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310231144914.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310231144914.png"
+                      alt=""
                 ></p>
 <p><strong><code>f(t)</code> 图像：</strong></p>
 <ul>
@@ -739,7 +737,7 @@
 </li>
 <li><p>纵轴 <code>f(t)</code> 代表图像的强度（亮度）。</p>
 </li>
-<li><p>图中显示了一个信号从低强度（左侧）逐渐平缓地过渡到高强度（右侧）的过程。这种平缓的过渡就是图上红线圈出来的区域，标记为 **”Edge”**。</p>
+<li><p>图中显示了一个信号从低强度（左侧）逐渐平缓地过渡到高强度（右侧）的过程。这种平缓的过渡就是图上红线圈出来的区域，标记为 <strong>“Edge”</strong>。</p>
 </li>
 <li><p><strong>关键点：</strong> 这个边缘不是一个理想的<strong>阶跃（step）</strong>，而是一个<strong>斜坡（ramp）</strong>。换句话说，图像亮度不是突然跳变，而是<strong>“信号慢慢增强”</strong>。</p>
 </li>
@@ -773,31 +771,25 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310231303666.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310231303666.png"
+                      alt=""
                 ></p>
 <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">NMS</span>(<span class="params">Gx, Gy</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">       非极大值抑制</span></span><br><span class="line"><span class="string">       params:</span></span><br><span class="line"><span class="string">             Gx,Gy: 图像在水平,垂直方向上的梯度</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    GraMag= np.sqrt(Gx ** <span class="number">2</span> + Gy ** <span class="number">2</span>)</span><br><span class="line">    Gx[np.<span class="built_in">abs</span>(Gx) &lt;= <span class="number">1e-5</span>] = <span class="number">1e-5</span></span><br><span class="line">    temp = np.arctan2(Gy, Gx) / np.pi*<span class="number">180.0</span></span><br><span class="line">    temp[temp &lt; -<span class="number">22.5</span>] += <span class="number">180.0</span></span><br><span class="line">    <span class="comment"># arctan (-Π/2,Π/2) ,操作后(0,Π)</span></span><br><span class="line">    angle = np.zeros_like(temp, dtype=np.uint8)</span><br><span class="line">    Height, Width = temp.shape</span><br><span class="line">    <span class="comment"># 方向角度离散化为四个主要方向</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(Height):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(Width):</span><br><span class="line">            <span class="keyword">if</span> temp[i, j] &lt;= <span class="number">22.5</span>:</span><br><span class="line">                angle[i, j] = <span class="number">0</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="number">22.5</span> &lt; temp[i, j] &lt;= <span class="number">67.5</span>:</span><br><span class="line">                angle[i, j] = <span class="number">45</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="number">67.5</span> &lt; temp[i, j] &lt;= <span class="number">112.5</span>:</span><br><span class="line">                angle[i, j] = <span class="number">90</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="number">112.5</span> &lt; temp[i, j] &lt;= <span class="number">157.5</span>:</span><br><span class="line">                angle[i, j] = <span class="number">135</span></span><br><span class="line">    Height, Width = angle.shape</span><br><span class="line">    di0, dj0, di1, dj1 = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(Height):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(Width):</span><br><span class="line">            <span class="keyword">if</span> angle[i, j] == <span class="number">0</span>: </span><br><span class="line">                di0, di1, dj0, dj1 = -<span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span></span><br><span class="line">            <span class="keyword">elif</span> angle[i, j] == <span class="number">45</span>:</span><br><span class="line">                di0, di1, dj0, dj1 = -<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, -<span class="number">1</span></span><br><span class="line">                <span class="comment"># (x-1,y+1) (x+1,y-1)</span></span><br><span class="line">            <span class="keyword">elif</span> angle[i, j] == <span class="number">90</span>:</span><br><span class="line">                di0, di1, dj0, dj1 = <span class="number">0</span>, -<span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> angle[i, j] == <span class="number">135</span>:</span><br><span class="line">                di0, di1, dj0, dj1 = -<span class="number">1</span>, -<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">            <span class="comment"># 边缘情况处理一下</span></span><br><span class="line">            <span class="keyword">if</span> j == <span class="number">0</span>:</span><br><span class="line">                <span class="comment"># 横轴无法-1</span></span><br><span class="line">                di0 = <span class="built_in">max</span>(di0, <span class="number">0</span>)</span><br><span class="line">                dj0 = <span class="built_in">max</span>(dj0, <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">if</span> j == Width - <span class="number">1</span>:</span><br><span class="line">                di0 = <span class="built_in">min</span>(di0, <span class="number">0</span>)</span><br><span class="line">                dj0 = <span class="built_in">min</span>(dj0, <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">if</span> i == <span class="number">0</span>:</span><br><span class="line">                di1 = <span class="built_in">max</span>(di1, <span class="number">0</span>)</span><br><span class="line">                dj1 = <span class="built_in">max</span>(dj1, <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">if</span> i == Height - <span class="number">1</span>:</span><br><span class="line">                di1 = <span class="built_in">min</span>(di1, <span class="number">0</span>)</span><br><span class="line">                dj1 = <span class="built_in">min</span>(dj1, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">max</span>(<span class="built_in">max</span>(GraMag[i, j], GraMag[i + di1, j + di0]), GraMag[i + dj1, j + dj0]) != GraMag[i, j]:</span><br><span class="line">                GraMag[i, j] = <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> GraMag</span><br></pre></td></tr></table></figure></div>
-
-
-
 <h4 id="2-5-2-双门限法"><a href="#2-5-2-双门限法" class="headerlink" title="2.5.2 双门限法"></a>2.5.2 双门限法</h4><p>门限设置过高会导致原本某些边会被去除，但是门限设置的过低又会导致某些假边存在（噪声边）；</p>
 <p>双门限法的思想是：先用高门限将粗狂的边检测出来 – 这些边是噪声的可能性较低，接着降低门限使得较弱的边显现，只选择与粗狂边有连接的边保留</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310231526044.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310231526044.png"
+                      alt=""
                 ></p>
 <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">doubleThresholdDetection</span>(<span class="params">src, HT, LT</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; </span></span><br><span class="line"><span class="string">       双门限检测</span></span><br><span class="line"><span class="string">       param:</span></span><br><span class="line"><span class="string">         HT: 高阈值,高于此阈值直接判定为边界</span></span><br><span class="line"><span class="string">         LT: 低阈值,低于此阈值直接忽略,否则归为待定</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    Height, Width = src.shape</span><br><span class="line">    src[src &gt;= HT] = <span class="number">255</span></span><br><span class="line">    src[src &lt; LT] = <span class="number">0</span></span><br><span class="line">    src = np.pad(src,[[<span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>]], <span class="string">&#x27;constant&#x27;</span>, constant_values=(<span class="number">0</span>, <span class="number">0</span>))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, Height + <span class="number">2</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, Width + <span class="number">2</span>):</span><br><span class="line">            <span class="keyword">if</span> LT &lt;= src[i,j] &lt;= HT:</span><br><span class="line">                max_value = -np.inf  </span><br><span class="line">                <span class="keyword">for</span> di <span class="keyword">in</span> <span class="built_in">range</span>(-<span class="number">1</span>, <span class="number">2</span>): </span><br><span class="line">                    <span class="keyword">for</span> dj <span class="keyword">in</span> <span class="built_in">range</span>(-<span class="number">1</span>, <span class="number">2</span>):  </span><br><span class="line">                        <span class="keyword">if</span> src[i + di, j + dj] &gt; max_value:</span><br><span class="line">                            <span class="comment"># 遍历自身+周围所有点，求最大值</span></span><br><span class="line">                            max_value = src[i + di, j + dj]</span><br><span class="line">                <span class="keyword">if</span> max_value &gt;= HT:</span><br><span class="line">                    src[i, j] = <span class="number">255</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    src[i, j] = <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> src[<span class="number">1</span>:Height+<span class="number">1</span>, <span class="number">1</span>:Width+<span class="number">1</span>]</span><br></pre></td></tr></table></figure></div>
-
-
-
 <h4 id="2-5-3-边缘提取算法"><a href="#2-5-3-边缘提取算法" class="headerlink" title="2.5.3 边缘提取算法"></a>2.5.3 边缘提取算法</h4><p>一个完整的边缘提取算法大致步骤如下（以Canny算法举例）</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310231614530.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310231614530.png"
+                      alt=""
                 ></p>
 <h2 id="3-拟合"><a href="#3-拟合" class="headerlink" title="3.拟合"></a>3.拟合</h2><p>参考文章：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/moonoa/article/details/107354891" >(8条消息) 拟合(Fitting)_fitting拟合_Wang Yuexin的博客-CSDN博客<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>；</p>
 <hr>
@@ -808,8 +800,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310231954854.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310231954854.png"
+                      alt=""
                 ></p>
 <blockquote>
 <p>拟合的难点：</p>
@@ -817,8 +809,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310232210177.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310232210177.png"
+                      alt=""
                 ></p>
 <ol>
 <li>噪声：噪声的存在使拟合的模型偏离真实的线</li>
@@ -841,25 +833,24 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310232549486.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310232549486.png"
+                      alt=""
                 ></p>
 <p>目标：找到一条线，使得这些点到线沿着纵轴方向的距离最短（注意不是垂直！！！），转化为使得优化函数E最小</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310232641838.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310232641838.png"
+                      alt=""
                 ></p>
 <p> E 被定义为 Y−XB 的范数（模长）的平方：</p>
-<p>经过上述变化可以直接求解B，使用最小二乘法求解得到的B是实际XB&#x3D;Y方程的近似解</p>
-<img  
+<p>经过上述变化可以直接求解B，使用最小二乘法求解得到的B是实际XB=Y方程的近似解</p>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250610165339694.png"
                       alt="image-20250610165339694" style="zoom:80%;" 
-                >
-
+                ></p>
 <p>最小二乘法的问题：</p>
 <ol>
 <li>假如要估计的直线是垂直的则无法使用最小二乘法；</li>
@@ -869,30 +860,30 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310232928138.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310232928138.png"
+                      alt=""
                 ></p>
 <p>使用上述的模型则优化函数E的表达式和待求解矩阵N的关系推导如下</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310233031268.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310233031268.png"
+                      alt=""
                 ></p>
 <p>在函数的最低点（或最高点），函数的斜率（即导数）为 0。对于一个凸函数（本例中的 E 就是一个关于参数的二次函数，其图像是碗状的，所以是凸函数），导数为 0 的点就是其全局最小值点。</p>
 <p>权最小二乘法的几何解释：找到一条直线，使得所有点在法向量方向上的投影最小</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310233113497.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310233113497.png"
+                      alt=""
                 ></p>
 <p>权最小二乘法的问题：全最小二乘对外点来说不适用，拟合性很差</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310233229415.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310233229415.png"
+                      alt=""
                 ></p>
 <h3 id="3-3-鲁棒性最小二乘"><a href="#3-3-鲁棒性最小二乘" class="headerlink" title="3.3 鲁棒性最小二乘"></a>3.3 鲁棒性最小二乘</h3><blockquote>
 <p>假如点到直线的距离过大（外点），那么认为其贡献有上限</p>
@@ -900,15 +891,15 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310233334133.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310233334133.png"
+                      alt=""
                 ></p>
 <p>使用鲁棒性最小二乘可以缓解外点带来的影响</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230310233520535.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230310233520535.png"
+                      alt=""
                 ></p>
 <ul>
 <li>参数过小会导致每个点都没有贡献</li>
@@ -945,13 +936,13 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230314201653278.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230314201653278.png"
+                      alt=""
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20250610172322068.png"
+                     data-src="\计算机视觉笺疏\image-20250610172322068.png"
                       alt="image-20250610172322068"
                 ></p>
 <p>而实际任务过程中，外点率e通常是未知的（因为我们要拟合的线是什么都不知道，又怎么可能知道哪些点不属于这条线？），如何确定迭代次数N呢？</p>
@@ -959,8 +950,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230314202137408.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230314202137408.png"
+                      alt=""
                 ></p>
 <h3 id="3-5-Hough-transform"><a href="#3-5-Hough-transform" class="headerlink" title="3.5 Hough transform"></a>3.5 Hough transform</h3><p>基本思想：</p>
 <ul>
@@ -972,34 +963,34 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230314223050529.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230314223050529.png"
+                      alt=""
                 ></p>
 <p>霍夫变换的原理是图像空间中的一个点对应参数空间的一条直线，那么图像空间中的两个点对应参数空间中的两条直线，参数空间中这两条直线的交点对应的参数实际就是图像空间中两点确定的直线的参数；通过在参数空间中设置一个“累加器”网格，统计每个交点的“投票”数量。得票最高的参数空间中的点，就对应着图像空间中最可能存在的直线。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230314222710832.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230314222710832.png"
+                      alt=""
                 ></p>
 <p>当图像空间中的点足够多的时候，参数空间中会存在多条直线，这些直线的交点（理解为得分最高的grid）就是图像空间中拟合的直线模型的参数</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230314223202917.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230314223202917.png"
+                      alt=""
                 ></p>
 <p>直角坐标的缺点：</p>
 <ul>
 <li>对于m，b两个参数构成的参数空间本身是无范围的，这就给离散化带来困难（grid无穷）；</li>
 <li>对于垂直直线m的范围为无穷，在参数空间中无法表示；</li>
 </ul>
-<p>引入极坐标系解决问题，其中θ∈(0°,180°)，下面是如何将图像空间中的直线上的点转换为极坐标参数空间下的直线并进行投票的算法（也是真正常用的霍夫变换）。与 y&#x3D;mx+b 类似，图像空间中的一个点 (x,y)，在极坐标参数空间 (ρ,θ) 中，也对应着一条曲线（通常是正弦曲线）。</p>
+<p>引入极坐标系解决问题，其中θ∈(0°,180°)，下面是如何将图像空间中的直线上的点转换为极坐标参数空间下的直线并进行投票的算法（也是真正常用的霍夫变换）。与 y=mx+b 类似，图像空间中的一个点 (x,y)，在极坐标参数空间 (ρ,θ) 中，也对应着一条曲线（通常是正弦曲线）。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230314224211636.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230314224211636.png"
+                      alt=""
                 ></p>
 <p><strong>Initialize accumulator H to all zeros</strong>：</p>
 <ul>
@@ -1014,13 +1005,13 @@
 <p><strong>For each edge point (x,y) in the image</strong>：</p>
 <ul>
 <li>遍历图像中所有的<strong>边缘点</strong>（这些点通常是预先通过边缘检测算法，如 Canny 或 Sobel 算子得到的）。</li>
-<li><strong>For θ&#x3D;0 to 180</strong>：<ul>
+<li><strong>For θ=0 to 180</strong>：<ul>
 <li>对于每一个边缘点 (x,y)，我们假设它可能是通过任何方向的直线。因此，我们遍历 θ 的所有可能值（从 0∘ 到 180∘，通常以某个步长递增）。</li>
-<li><strong>ρ&#x3D;xcosθ+ysinθ</strong>：<ul>
+<li><strong>ρ=xcosθ+ysinθ</strong>：<ul>
 <li>根据当前边缘点 (x,y) 和当前的 θ 值，计算出对应的 ρ 值。这相当于找到一条过点 (x,y) 的直线的垂线距离，<strong>其中该垂线与 X 轴正方向的夹角为 θ</strong>。”</li>
 </ul>
 </li>
-<li><strong>H(θ, ρ) &#x3D; H(θ, ρ) + 1</strong>：<ul>
+<li><strong>H(θ, ρ) = H(θ, ρ) + 1</strong>：<ul>
 <li>在累加器 <code>H</code> 中，找到由计算出的 (ρ,θ) 对所对应的“bin”（离散化后的单元格）。</li>
 <li>将该 bin 的值加 1。这被称为“投票”。一个边缘点会对其可能所属的每条直线（即每个 (ρ,θ) 对）进行投票。</li>
 </ul>
@@ -1033,7 +1024,7 @@
 <li>在所有边缘点都投票完毕后，遍历累加器 <code>H</code>。</li>
 <li>找到累加器中值最高的（或局部最大值的）那些 (ρ,θ) 对。这些高值表明有许多边缘点在图像空间中共线，并且它们的投票在参数空间的同一个 (ρ,θ) bin 中汇聚。</li>
 </ul>
-<p><strong>The detected line in the image is given by ρ&#x3D;xcosθ+ysinθ</strong>：</p>
+<p><strong>The detected line in the image is given by ρ=xcosθ+ysinθ</strong>：</p>
 <ul>
 <li>累加器中的局部最大值对应的 (ρ,θ) 值，就是图像中检测到的直线的参数。将这些参数代回直线方程，就可以在图像中绘制出检测到的直线了。</li>
 </ul>
@@ -1042,14 +1033,14 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230314224618115.png"
+                     data-src="\计算机视觉笺疏\image-20230314224618115.png"
                       alt="img"
                 ></p>
 <p>​         外界的噪声：随机噪声会导致出现很多伪峰值</p>
-<p>​		 <img  
+<p>​         <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230314224745399.png"
+                     data-src="\计算机视觉笺疏\image-20230314224745399.png"
                       alt="img"
                 ></p>
 <p>由于图像空间中的点并非完美地共线，而是在一条“模糊的直线”上，它们在参数空间中对应的曲线不会完美地汇聚到一个尖锐的交点。相反，它们会在一个区域内形成一个<strong>“模糊的峰值”</strong>，而不是一个清晰的、孤立的亮点。这使得找到代表真实直线的精确参数变得困难。</p>
@@ -1067,8 +1058,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230314225332181.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230314225332181.png"
+                      alt=""
                 ></p>
 <p><strong>解决上述问题主要有如下三种方法：</strong></p>
 <ol>
@@ -1114,7 +1105,7 @@
 <p> 的搜索空间，减少了无效的投票，从而：</p>
 <ul>
 <li><strong>解决了噪声的影响：</strong> 减少了随机噪声点在参数空间中产生伪峰值的机会，因为每个噪声点只在一个很小的 θ 范围内投票。</li>
-<li><strong>简化了计算：</strong> 大大减少了内层循环的迭代次数（从 180&#x2F;步长 减少到 1 或很少的几个值），提高了算法的效率。</li>
+<li><strong>简化了计算：</strong> 大大减少了内层循环的迭代次数（从 180/步长 减少到 1 或很少的几个值），提高了算法的效率。</li>
 </ul>
 </li>
 </ul>
@@ -1127,24 +1118,24 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230314231613633.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230314231613633.png"
+                      alt=""
                 ></p>
-<p><strong>梯度 ∇I(x,y)<strong>：这个梯度是在图像空间中的边缘点 (x,y) 处计算的。它表示在该点处图像强度变化最快的方向和速率。对于一个边缘点，其梯度方向通常是</strong>垂直于边缘</strong>的。</p>
+<p><strong>梯度 ∇I(x,y)</strong>：这个梯度是在图像空间中的边缘点 (x,y) 处计算的。它表示在该点处图像强度变化最快的方向和速率。对于一个边缘点，其梯度方向通常是<strong>垂直于边缘</strong>的。</p>
 <p>在实际的求解中并不知道圆周上每一点(x,y)以及半径，所以需要穷举所有的r（大于0小于图像长度），遍历圆上每一点进行投票；</p>
 <h4 id="3-5-3-小结"><a href="#3-5-3-小结" class="headerlink" title="3.5.3 小结"></a>3.5.3 小结</h4><p>霍夫变化对参数空间非常敏感，如果空间维度高了霍夫变化的运算量会非常大</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230324103430042.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230324103430042.png"
+                      alt=""
                 ></p>
 <h2 id="4-区域检测-角点"><a href="#4-区域检测-角点" class="headerlink" title="4.区域检测-角点"></a>4.区域检测-角点</h2><h3 id="4-1-特征点"><a href="#4-1-特征点" class="headerlink" title="4.1 特征点"></a>4.1 特征点</h3><p>文章参考：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/moonoa/article/details/107402763?spm=1001.2014.3001.5502" >(15条消息) 区域检测——Harris角点_Wang Yuexin的博客-CSDN博客<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>；</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230324154102036.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230324154102036.png"
+                      alt=""
                 ></p>
 <p>图像处理过程中有一种任务是图像拼接，图像拼接即实现全景拍摄的一种手段，需要分析图片结构提取其特征点；</p>
 <p>实现图像拼接具体步骤是什么？提取图像特征点采用的具体算法是什么？下面将介绍</p>
@@ -1174,77 +1165,68 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230324155330698.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230324155330698.png"
+                      alt=""
                 ></p>
 <p>将上述思想描述为数学公式如下</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230324155439402.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230324155439402.png"
+                      alt=""
                 ></p>
 <p>公式的意思是平移后的窗口与平移前的窗口的对应位置差的平方累加求和，E(u,v)就表示两个窗口内容的差异值的总和，其中</p>
 <ul>
 <li>u和v是平移量；</li>
 <li>考虑到每个点对窗口影响的不同程度，因此可以乘以窗口权重，赋予不同位置的点的差值对E(u,v)的影响程度；</li>
 </ul>
-<p>如何直接建立u,v和E(u,v)之间的关系而不是如上面式子一样需要对应图像像素I(x,y)？这里使用泰勒展开式，在u&#x3D;0,v&#x3D;0的点二维泰勒展开</p>
+<p>如何直接建立u,v和E(u,v)之间的关系而不是如上面式子一样需要对应图像像素I(x,y)？这里使用泰勒展开式，在u=0,v=0的点二维泰勒展开</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230324155947848.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230324155947848.png"
+                      alt=""
                 ></p>
 <p>将上述泰勒展开计算并简化后得到</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230324160030776.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230324160030776.png"
+                      alt=""
                 ></p>
-<img  
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250611221622674.png"
                       alt="image-20250611221622674" style="zoom:67%;" 
-                >
-
-
-
+                ></p>
 <p>上述公式中$I_x$、$I_y$分别表示点在x方向和y方向的偏导，M是一个二阶矩矩阵加权求和；</p>
 <p>从矩阵M的公式可以知道，给定一个像素区域即可将矩阵M计算出来，而矩阵M决定了u,v和E(u,v)方程之间的特性，因此将上述问题转换为分析矩阵M；</p>
 <p>将上述E(u,v)与u,v的函数方程<img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230324160909716.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230324160909716.png"
+                      alt=""
                 ></p>
 <p>绘制如下</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20250611222043663.png"
+                     data-src="\计算机视觉笺疏\image-20250611222043663.png"
                       alt="image-20250611222043663"
                 ></p>
-<img  
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250611222127050.png"
                       alt="image-20250611222127050" style="zoom: 67%;" 
-                >
-
-<img  
+                ></p>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250611222208525.png"
                       alt="image-20250611222208525" style="zoom:67%;" 
-                >
-
-
-
-
-
+                ></p>
 <p>该图像沿平行uOv平面截取得到的截面是一个椭圆，这个椭圆可以看作是M矩阵的几何形状：</p>
 <ul>
 <li>当$I_x$和$I_y$均为0时（表现为窗口沿着任意方向移动前后差异值为0）截面为圆，表示此时窗口位于图像内部；</li>
@@ -1255,15 +1237,15 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230324161411080.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230324161411080.png"
+                      alt=""
                 ></p>
-<p>可以看到上述椭圆并不是正椭圆，即x方向的变化与y方向的变化并不能正交（无关），表现在M矩阵中即I<del>x</del>I<del>y</del>和I<del>y</del>I<del>x</del>都不为0，则不能使用前面三种判断方式，简单的，可以使用正交矩阵R对椭圆进行旋转使其成为正椭圆</p>
+<p>可以看到上述椭圆并不是正椭圆，即x方向的变化与y方向的变化并不能正交（无关），表现在M矩阵中即I~x~I~y~和I~y~I~x~都不为0，则不能使用前面三种判断方式，简单的，可以使用正交矩阵R对椭圆进行旋转使其成为正椭圆</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230324161638852.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230324161638852.png"
+                      alt=""
                 ></p>
 <blockquote>
 <p>PS：此处的$λ_1$和$λ_2$分别代表了$I_x$和$I_y$；</p>
@@ -1272,15 +1254,15 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230324162802390.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230324162802390.png"
+                      alt=""
                 ></p>
 <p>即将$λ_1$和$λ_2$特征转化给R，最终检测某个窗口内是否含有角点的问题就转化为判断R的问题</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230324162924445.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230324162924445.png"
+                      alt=""
                 ></p>
 <h3 id="4-3-Harris检测器"><a href="#4-3-Harris检测器" class="headerlink" title="4.3 Harris检测器"></a>4.3 Harris检测器</h3><blockquote>
 <p>Invariance:特征提取器对进行变换过后的图像（光照、角度）提取到的特征和没有变换之前的图像提取到的特征完全相同；</p>
@@ -1303,8 +1285,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230324163340955.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230324163340955.png"
+                      alt=""
                 ></p>
 <h2 id="5-区域检测-Blob检测"><a href="#5-区域检测-Blob检测" class="headerlink" title="5.区域检测-Blob检测"></a>5.区域检测-Blob检测</h2><p>参考文章：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/moonoa/article/details/107489004?spm=1001.2014.3001.5502" >(5条消息) 区域检测——Blob检测_Wang Yuexin的博客-CSDN博客<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>；</p>
 <hr>
@@ -1312,8 +1294,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331152235053.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331152235053.png"
+                      alt=""
                 ></p>
 <h3 id="5-1-拉普拉斯核"><a href="#5-1-拉普拉斯核" class="headerlink" title="5.1 拉普拉斯核"></a>5.1 拉普拉斯核</h3><blockquote>
 <p>拉普拉斯核具备尺度不变性和旋转不变性，它作为工具与其他算法构成比如说Harris-Laplacian或SIFT算法，这些算法是具备检测尺度不变性特征点的；至于为什么使用拉普拉斯算子而不是高斯一阶偏导核，因为只有高斯二阶偏导才能做尺度选择；</p>
@@ -1322,15 +1304,15 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331152648373.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331152648373.png"
+                      alt=""
                 ></p>
 <p>对不同的图像使用同一个拉普拉斯核(方差为1)进行卷积，得到如下的波纹图</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331152944652.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331152944652.png"
+                      alt=""
                 ></p>
 <p>波纹图中二阶偏导为0的点表示信号边缘，即波纹表示边缘信息，当波纹重叠并出现极值（最后一幅图），表示此时的信号和拉普拉斯核对应（尺度选择特性）；</p>
 <p>在原始信号发生<strong>跳变（边缘）的地方，卷积后的信号会出现一个过零点（zero-crossing）</strong>，即信号从正值变为负值（或从负值变为正值）的地方。这个过零点的位置通常被用来指示边缘。</p>
@@ -1339,14 +1321,14 @@
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://gintoki-jpg.github.io/images/image-20230331153740836.png"
-                     
+                      alt=""
                 ></p>
 <p>为了防止这种情况需要乘以σ^2^（拉普拉斯核是二阶高斯导数），称为尺度标准化，将标准化后的拉普拉斯核用于卷积信号图像得到如下波纹图</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331154006007.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331154006007.png"
+                      alt=""
                 ></p>
 <p>为了解决 LoG 算子响应强度随 σ 增大而减弱的问题，引入了<strong>尺度标准化（scale normalization）</strong>。</p>
 <p>方法是：将 LoG 算子乘以 σ2。这样可以补偿因 σ 增大导致的响应衰减，使得不同尺度下的边缘响应强度具有可比性。</p>
@@ -1355,57 +1337,52 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331155840210.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331155840210.png"
+                      alt=""
                 ></p>
 <p>要使用上述拉普拉斯核对二维圆信号进行检测，拉普拉斯核的方差σ与圆信号的半径有什么关系呢？换句话说，当拉普拉斯核与圆信号匹配得到最大相应的时候，拉普拉斯核与圆信号有什么联系？</p>
-<p>为了得到最大相应（即拉普拉斯核与圆信号卷积后的结果最大），拉普拉斯核的零点需要与圆信号对齐 &lt;&#x3D;&gt; 卷积后响应最大，此时拉普拉斯核的零点与圆信号的边缘是对齐的；</p>
+<p>为了得到最大相应（即拉普拉斯核与圆信号卷积后的结果最大），拉普拉斯核的零点需要与圆信号对齐 &lt;=&gt; 卷积后响应最大，此时拉普拉斯核的零点与圆信号的边缘是对齐的；</p>
 <p>当拉普拉斯核的零点精确地对准图像信号的边缘时，卷积操作会产生最大的响应</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331160316223.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331160316223.png"
+                      alt=""
                 ></p>
 <p>这点比较难以理解，不妨用一维的拉普拉斯核与一维信号解释，只有形式如下的拉普拉斯核与一维信号做卷积得到的结果最大（拉普拉斯核零点与信号边缘对齐），也就是出现波纹重叠的极值，否则正向面积均会被抵消一部分；</p>
 <p>这也解释了为什么原始信号与不匹配的拉普拉斯模板进行卷积后不会得到最大响应值；</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331160348936.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331160348936.png"
+                      alt=""
                 ></p>
 <p>二维平面中拉普拉斯核的零点方程表示为</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331161110758.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331161110758.png"
+                      alt=""
                 ></p>
 <p>化简后得到</p>
-<img  
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250610205652571.png"
                       alt="image-20250610205652571" style="zoom:80%;" 
-                >
-
-
-
-
-
+                ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331161133932.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331161133932.png"
+                      alt=""
                 ></p>
 <p>即圆半径r与拉普拉斯核的方差之间的关系为</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331161203038.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331161203038.png"
+                      alt=""
                 ></p>
 <blockquote>
 <p>多尺度理论：拉普拉斯核的方差越大则检测的圆信号越大，即大σ检测大信号（宽阔、更模糊的边缘或较大的圆形），小σ检测小信号；</p>
@@ -1416,8 +1393,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331162706577.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331162706577.png"
+                      alt=""
                 ></p>
 <blockquote>
 <p>不变性：拉普拉斯核也就是拉普拉斯特征点具备尺度不变性和旋转不变性，因此是invariant的(拉普拉斯特征点无论是缩放还是旋转都是特征点)；但Blob圆的大小会因为缩放和图像旋转改变，因此是covariant的；</p>
@@ -1459,15 +1436,11 @@
 </li>
 <li><p><strong>原理：</strong> 上一步找到的只是潜在的关键点，它们可能包含大量的边缘点或低对比度点，这些点不稳定且不具有代表性。这一步通过拟合三维二次函数来精确确定关键点的位置（x, y）和尺度（σ），并去除不稳定的关键点。</p>
 <ol>
-<li><strong>精确拟合：</strong></li>
-</ol>
-<ul>
-<li>对于每一个在DoG尺度空间找到的极值点，使用泰勒展开式对DoG函数进行拟合，以获得更精确的极值位置。<ul>
+<li><strong>精确拟合：</strong><ul>
+<li>对于每一个在DoG尺度空间找到的极值点，使用泰勒展开式对DoG函数进行拟合，以获得更精确的极值位置。</li>
 <li>通过求导并令导数等于零，可以找到局部极值的精确坐标（亚像素级）和尺度。</li>
 </ul>
 </li>
-</ul>
-<ol start="2">
 <li><strong>去除不稳定的关键点：</strong><ul>
 <li><strong>低对比度点去除：</strong> 如果拟合出的极值点的DoG响应值（也就是对比度）低于某个阈值，则认为该点不稳定，将其舍弃。例如，在一片均匀的背景中，即使算法找到了极值点，其对比度也可能非常低，不适合作为特征点。</li>
 <li><strong>边缘效应去除：</strong> 边缘点在DoG函数上通常表现为沿着边缘方向的较大响应，但在垂直于边缘的方向上响应较小。SIFT使用Hessian矩阵来计算主曲率比率。如果主曲率比率超过某个阈值，则认为该点是边缘点，将其舍弃。这是因为边缘点在不同尺度下容易发生偏移，导致不稳定性。</li>
@@ -1506,28 +1479,28 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331164648607.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331164648607.png"
+                      alt=""
                 ></p>
 <p>DoG主要从以下几方面提升拉普拉斯核的效率（后面还会详细解释，这里仅给出结论）：</p>
 <ol>
 <li>高斯空间中的模板利用DoG算法直接在前一层的基础上计算，这样就形成一个DoG空间，得到的模板与高斯空间相差一个常数项(k-1)；</li>
 <li>计算大尺度的模板时不改变参数值，而改变图像大小，例如：将图像缩小一倍时不改变模板尺度得到效果和不改变图像大小时增大模板尺度的效果相同，那么计算四倍尺度的值就可以直接将图像缩小四倍；</li>
-<li>k&#x3D;2^1&#x2F;s^，其中s表示要输出的尺度数量，即可利用s来确定k；</li>
+<li>k=2^1/s^，其中s表示要输出的尺度数量，即可利用s来确定k；</li>
 <li>模板尺度通常取2的等比数列；</li>
 </ol>
 <h4 id="5-3-1-尺度空间"><a href="#5-3-1-尺度空间" class="headerlink" title="5.3.1 尺度空间"></a>5.3.1 尺度空间</h4><p>在未知场景中计算机视觉并不能提供物体的尺度大小，其中一种方法是将物体不同尺度下的图像都提供给机器，让机器能够对物体在不同的尺度下有一个统一的认知，因此需要考虑图像在不同尺度下都存在的特征点；</p>
 <h5 id="1-图像金字塔"><a href="#1-图像金字塔" class="headerlink" title="(1)图像金字塔"></a>(1)图像金字塔</h5><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331183732189.png"
+                     data-src="\计算机视觉笺疏\image-20230331183732189.png"
                       alt="多分辨率图像金字塔"
                 ></p>
 <p>降采样：<strong>减少图像中像素的数量</strong>，从而减小图像的尺寸和数据量</p>
 <p>早期图像的多尺度通常用图像金字塔表示，图像金字塔是同一图像在不同分辨率下得到的一组结果，其生成步骤主要分为两步：</p>
 <ol>
 <li>对原始图像进行平滑操作；</li>
-<li>对处理后的图像进行降采样（一般是水平、垂直方向的1&#x2F;2像素）</li>
+<li>对处理后的图像进行降采样（一般是水平、垂直方向的1/2像素）</li>
 </ol>
 <h5 id="2-高斯金字塔"><a href="#2-高斯金字塔" class="headerlink" title="(2)高斯金字塔"></a>(2)高斯金字塔</h5><p>降采样后得到一系列不断尺寸缩小的图像，因为使用的是降采样方案，故图像的局部特征难以保持，也就是无法保持特征的尺度不变性；</p>
 <p>因此提出了另一种尺度空间的表现形式 – 高斯尺度空间，在分辨率不变的条件下使用不同的参数来模糊图像；</p>
@@ -1535,30 +1508,30 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331184327817.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331184327817.png"
+                      alt=""
                 ></p>
 <p>其中的G(x,y,σ)是高斯核函数</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331184412063.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331184412063.png"
+                      alt=""
                 ></p>
 <p>称方差σ为尺度空间因子，因为它能够反应图像被模糊的程度，σ值越大图像越模糊，对应的尺度L也就越大，由不同尺度L构成的L(x,y,σ)就是图像的高斯尺度空间；</p>
 <p>构建尺度空间是为了能够检测出在不同尺度下都存在的特征点，检测特征点使用的算子就是前面介绍过的拉普拉斯核</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331184748286.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331184748286.png"
+                      alt=""
                 ></p>
 <p>因为拉普拉斯核LoG的运算量过大，所以引入了DoG差分高斯来近似计算LoG</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331185025026.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331185025026.png"
+                      alt=""
                 ></p>
 <p>其中k是相邻两个高斯尺度空间的比例因子，L(x,y,σ)是图像的高斯尺度空间；</p>
 <p>DoG的计算公式表明将相邻的两个高斯空间的图像相减就可以得到DoG的响应图像，因此要得到DoG图像（因为得到DoG图像实际就得到了LoG），首先需要构建高斯尺度空间：高斯尺度空间可以在图像金字塔降采样的基础上加上高斯滤波得到，也就是对图像金字塔的每层图像使用不同的参数σ进行高斯模糊，使每层金字塔有多张高斯模糊过的图像；</p>
@@ -1568,59 +1541,59 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331191040936.png"
+                     data-src="\计算机视觉笺疏\image-20230331191040936.png"
                       alt="高斯尺度空间"
                 ></p>
 <p>从上面的高斯金字塔可以看出，高斯金字塔有多组，每组有多层，一组中的多个层之间的尺度是不一样的（即使用的高斯参数σ是不同的），相邻两层之间的尺度相差一个比例因子k；</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331192056885.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331192056885.png"
+                      alt=""
                 ></p>
 <p>假如高斯金字塔的每组有S层，则</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331191401633.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331191401633.png"
+                      alt=""
                 ></p>
 <p>高斯金字塔的组数一般为</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331191802797.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331191802797.png"
+                      alt=""
                 ></p>
-<p>其中o表示高斯金字塔的组数，m，n分别是图像的行和列，系数a可以是0-log<del>2</del>min(m,n)中的任意值，与具体需要的金字塔的顶层图像的大小有关，一般取值为3；</p>
+<p>其中o表示高斯金字塔的组数，m，n分别是图像的行和列，系数a可以是0-log~2~min(m,n)中的任意值，与具体需要的金字塔的顶层图像的大小有关，一般取值为3；</p>
 <p>高斯模糊参数σ由下面的关系式得到</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331192652294.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331192652294.png"
+                      alt=""
                 ></p>
-<p>其中o为所在的组，s为所在的层，σ<del>0</del>为初始的尺度，S为每组的层数；</p>
+<p>其中o为所在的组，s为所在的层，σ~0~为初始的尺度，S为每组的层数；</p>
 <p>同一组内相邻层之间的图像尺度关系为</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331192847962.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331192847962.png"
+                      alt=""
                 ></p>
 <p>相邻组之间的尺度关系为</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331192910771.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331192910771.png"
+                      alt=""
                 ></p>
 <h4 id="5-3-2-DoG空间极值检测"><a href="#5-3-2-DoG空间极值检测" class="headerlink" title="5.3.2 DoG空间极值检测"></a>5.3.2 DoG空间极值检测</h4><p>为了寻找尺度空间的极值点，每个像素点要和其图像域（同一尺度空间）和尺度域（相邻的尺度空间）的所有相邻点进行比较，当其大于（或者小于）所有相邻点时，这个点就是极值点。如图所示，中间的检测点要和其所在图像的3×3邻域8个像素点，以及其相邻的上下两层的3×3领域18个像素点，共26个像素点进行比较（非最大化抑制）；</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331193221425.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331193221425.png"
+                      alt=""
                 ></p>
 <p>因为每组图像的第一层和最后一层无法进行比较取得极值，为了满足尺度变换的连续性，需要在每一组图像的顶层继续使用高斯模糊生成3幅图像，因此高斯金字塔每组有S+3层图像，DoG金字塔每组有S+2层图像；</p>
 <blockquote>
@@ -1628,8 +1601,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230331193658622.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230331193658622.png"
+                      alt=""
                 ></p>
 </blockquote>
 <h4 id="5-3-3-过滤特征点"><a href="#5-3-3-过滤特征点" class="headerlink" title="5.3.3 过滤特征点"></a>5.3.3 过滤特征点</h4><p>通过比较检测得到的DoG局部极值点是在离散空间搜索得到，由于离散空间是对连续空间采样得到的结果，因此离散空间上得到的极值点不一定是真正意义上的极值点，需要将不满足条件的极值点剔除；要剔除掉的不符合要求的点主要有两种：</p>
@@ -1645,22 +1618,22 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230408223749755.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230408223749755.png"
+                      alt=""
                 ></p>
 <p>由于x是D(x)的极值点，所以对上式求导并令其为0，得到</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230408223808777.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230408223808777.png"
+                      alt=""
                 ></p>
 <p>然后再把求得的Δx代入到D(x)的泰勒展开式中</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230408223828378.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230408223828378.png"
+                      alt=""
                 ></p>
 <p>设对比度的阈值为T，若∣D(x^)∣≥T，则该特征点保留，否则剔除该特征点；</p>
 <blockquote>
@@ -1670,30 +1643,30 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230408224006249.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230408224006249.png"
+                      alt=""
                 ></p>
-<p>其中，D<del>xx</del>,D<del>xy</del>,D<del>yy</del>是候选点邻域对应位置的差分求得的。为了避免求具体的值，可以使用H特征值得比例。设α&#x3D;λmax为H的最大特征值，β&#x3D;λmin为H的最小特征值，则</p>
+<p>其中，D~xx~,D~xy~,D~yy~是候选点邻域对应位置的差分求得的。为了避免求具体的值，可以使用H特征值得比例。设α=λmax为H的最大特征值，β=λmin为H的最小特征值，则</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230408224040630.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230408224040630.png"
+                      alt=""
                 ></p>
 <p>其中，Tr(H)为矩阵H的迹，Det(H)为矩阵H的行列式。</p>
-<p>设γ&#x3D;α&#x2F;β表示最大特征值和最小特征值的比值，则</p>
+<p>设γ=α/β表示最大特征值和最小特征值的比值，则</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230408224100191.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230408224100191.png"
+                      alt=""
                 ></p>
 <p>上式的结果与两个特征值的比例有关，和具体的大小无关，当两个特征值想等时其值最小，并且随着γ的增大而增大。因此为了检测主曲率是否在某个阈值Tγ下，只需检测</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230408224116504.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230408224116504.png"
+                      alt=""
                 ></p>
 <p>如果上式成立，则剔除该特征点，否则保留特征点；</p>
 <blockquote>
@@ -1705,17 +1678,17 @@
 <ol>
 <li>先确定一个圆</li>
 <li>将圆内的所有像素拿出来计算M矩阵</li>
-<li>比较计算出来的λ<del>1</del>、λ<del>2</del></li>
+<li>比较计算出来的λ~1~、λ~2~</li>
 <li>将较小的λ的方向进行缩小</li>
 <li>再将上一步缩小后的区域（椭圆）内的像素拿出来计算M矩阵</li>
-<li>重复上述步骤，逐步迭代。直至λ<del>1</del>和λ<del>2</del> 近似相等，说明区域边缘的梯度变化近似一致</li>
+<li>重复上述步骤，逐步迭代。直至λ~1~和λ~2~ 近似相等，说明区域边缘的梯度变化近似一致</li>
 <li>将椭圆转换到一样大小的圆中</li>
 </ol>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://gintoki-jpg.github.io/images/image-20230409000344662.png"
-                     
+                      alt=""
                 ></p>
 <h4 id="5-4-2-方向变化"><a href="#5-4-2-方向变化" class="headerlink" title="5.4.2 方向变化"></a>5.4.2 方向变化</h4><p>通过仿射自适应变换后，内容基本一致，但方向不同，对应的像素差异较大，无法识别；</p>
 <p>使用梯度方向法对圆的方向进行调整：</p>
@@ -1724,15 +1697,15 @@
 <li>将梯度方向量化成八份，给对应的直方图投票，票数就是梯度的大小</li>
 <li>统计完之后选择票数最高的方向作为圆内像素整体的梯度方向，将方向转换到0°，将整个圆进行相同的旋转</li>
 </ol>
-<h4 id="5-4-3-光照变换"><a href="#5-4-3-光照变换" class="headerlink" title="5.4.3 光照变换"></a>5.4.3 光照变换</h4><p>将圆均分成16格，每个格代表一个区域，统计每个区域的方向量化梯度（两化成八个角度，长度代表梯度大小），每个区域中由一个“8位”向量表示，将16个区域的向量拉直就得到一个8*16&#x3D;128的向量来描述这个圆内的内容，最后比较每个圆的128个数来判断两个圆内容的相似程度</p>
+<h4 id="5-4-3-光照变换"><a href="#5-4-3-光照变换" class="headerlink" title="5.4.3 光照变换"></a>5.4.3 光照变换</h4><p>将圆均分成16格，每个格代表一个区域，统计每个区域的方向量化梯度（两化成八个角度，长度代表梯度大小），每个区域中由一个“8位”向量表示，将16个区域的向量拉直就得到一个8*16=128的向量来描述这个圆内的内容，最后比较每个圆的128个数来判断两个圆内容的相似程度</p>
 <h2 id="6-纹理表示"><a href="#6-纹理表示" class="headerlink" title="6.纹理表示"></a>6.纹理表示</h2><p>参考链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/moonoa/article/details/107590894?spm=1001.2014.3001.5502" >纹理表示(Texture)_使用高斯偏导核,对图像_Wang Yuexin的博客-CSDN博客<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>；</p>
 <hr>
 <p>纹理是指一些基元以某种方式组合起来的，看起来很乱但存在一定内部规律的，物体上的花纹或线条，纹理主要分为规则的纹理和不规则的纹理</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230409202615406.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230409202615406.png"
+                      alt=""
                 ></p>
 <h3 id="6-1-纹理描述"><a href="#6-1-纹理描述" class="headerlink" title="6.1 纹理描述"></a>6.1 纹理描述</h3><p>因为纹理是由某些重复的局部模块组成的，所以纹理描述主要分为两个部分：</p>
 <ol>
@@ -1743,15 +1716,15 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230409203000952.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230409203000952.png"
+                      alt=""
                 ></p>
 <p>经过不同的变化得到的filter模板如下，形成了filter bank</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230409204135135.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230409204135135.png"
+                      alt=""
                 ></p>
 <p>filter bank中需要添加的filter主要包括检测edges、bars、spots这几类纹理模块的功能，同时这些filter可以检测满足不同比例和方向的纹理模块的要求；</p>
 <p>拥有filter bank之后，就可以按照如下步骤对图像进行纹理提取和分类：</p>
@@ -1763,22 +1736,22 @@
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://gintoki-jpg.github.io/images/image-20230409205734573.png"
-                     
+                      alt=""
                 ></li>
 </ol>
 <h3 id="6-2-纹理匹配"><a href="#6-2-纹理匹配" class="headerlink" title="6.2 纹理匹配"></a>6.2 纹理匹配</h3><p>将对应的卷积核的响应结果求均值，将所得结果组成一个7维度向量，每个向量对应一个纹理，可以将响应结果与纹理进行匹配</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230409210909630.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230409210909630.png"
+                      alt=""
                 ></p>
 <p>实际运用中将采取的纹理与数据库中的纹理进行对比，实现纹理检索与分类</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230409211159450.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230409211159450.png"
+                      alt=""
                 ></p>
 <h2 id="7-图像分割"><a href="#7-图像分割" class="headerlink" title="7.图像分割"></a>7.图像分割</h2><p>参考链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/moonoa/article/details/107712114?spm=1001.2014.3001.5502" >(11条消息) 图像分割(Segmentation)——K-Means, 最小割, 归一化图割_原始 k-means 分割_Wang Yuexin的博客-CSDN博客<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>；</p>
 <hr>
@@ -1787,7 +1760,7 @@
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://gintoki-jpg.github.io/images/image-20230413211629393.png"
-                     
+                      alt=""
                 ></p>
 <p>图像分割的结果可能有过分割（分割的过于细致）和欠分割（分割的不够细致），这两种情况都不是我们想要的，因此需要有一个适当的图像分割算法；</p>
 <h3 id="7-1-Gestalt理论"><a href="#7-1-Gestalt理论" class="headerlink" title="7.1 Gestalt理论"></a>7.1 Gestalt理论</h3><p>分割的依据 – Gestalt理论，相似性、连通、平行…</p>
@@ -1795,32 +1768,32 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230413212713503.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230413212713503.png"
+                      alt=""
                 ></p>
-<p>Gestalt一些常见的分组情况如下，代表了在什么样的情况下群组可以自动汇聚，什么样的情况下群组无法自动汇聚（即能够一眼辨别出的群组类型&#x2F;高效群组类型）</p>
+<p>Gestalt一些常见的分组情况如下，代表了在什么样的情况下群组可以自动汇聚，什么样的情况下群组无法自动汇聚（即能够一眼辨别出的群组类型/高效群组类型）</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230413212457140.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230413212457140.png"
+                      alt=""
                 ></p>
-<p>**都很均匀，无法分割 (Not grouped)**：元素分布均匀，没有明显的组织结构。</p>
-<p>**部分靠近，可以分割 (Proximity)**：距离相近的元素倾向于被视为一个组。</p>
-<p>**颜色相似性 (Similarity - Color)**：颜色相似的元素倾向于被视为一个组。</p>
-<p>**形状相似性 (Similarity - Shape)**：形状相似的元素倾向于被视为一个组。</p>
-<p>**朝向一致 (Common Fate)**：朝向或运动方向一致的元素倾向于被视为一个组。</p>
-<p>**共同区域 (Common Region)**：处于同一封闭区域内的元素倾向于被视为一个组。</p>
-<p>**平行 (Parallelism)**：相互平行的线条或元素倾向于被视为一个组。</p>
-<p>**对称 (Symmetry)**：对称的元素倾向于被视为一个组。</p>
-<p>**连续性 (Continuity)**：在方向上连续的线条或元素倾向于被视为一个组。</p>
-<p>**封闭的几何形状 (Closure)**：不完整的图形，如果能够被知觉为完整的封闭形状，则倾向于被视为一个组。</p>
+<p><strong>都很均匀，无法分割 (Not grouped)</strong>：元素分布均匀，没有明显的组织结构。</p>
+<p><strong>部分靠近，可以分割 (Proximity)</strong>：距离相近的元素倾向于被视为一个组。</p>
+<p><strong>颜色相似性 (Similarity - Color)</strong>：颜色相似的元素倾向于被视为一个组。</p>
+<p><strong>形状相似性 (Similarity - Shape)</strong>：形状相似的元素倾向于被视为一个组。</p>
+<p><strong>朝向一致 (Common Fate)</strong>：朝向或运动方向一致的元素倾向于被视为一个组。</p>
+<p><strong>共同区域 (Common Region)</strong>：处于同一封闭区域内的元素倾向于被视为一个组。</p>
+<p><strong>平行 (Parallelism)</strong>：相互平行的线条或元素倾向于被视为一个组。</p>
+<p><strong>对称 (Symmetry)</strong>：对称的元素倾向于被视为一个组。</p>
+<p><strong>连续性 (Continuity)</strong>：在方向上连续的线条或元素倾向于被视为一个组。</p>
+<p><strong>封闭的几何形状 (Closure)</strong>：不完整的图形，如果能够被知觉为完整的封闭形状，则倾向于被视为一个组。</p>
 <p>一个低效的群组可能导致识别的困难，而一个高效的群组可以很轻易的识别，区分一个群组是否高效主要就是看其是否符合上述几类Gestalt分组</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230413212648039.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230413212648039.png"
+                      alt=""
                 ></p>
 <p>Gestalt理论作为图像分割任务的指导理论，以下介绍的几种图像分割算法都是基于该理论；</p>
 <h3 id="7-2-K-Means聚类"><a href="#7-2-K-Means聚类" class="headerlink" title="7.2 K-Means聚类"></a>7.2 K-Means聚类</h3><p>主要思想：将分割的任务转换为聚类的任务 – 相似的像素属于同一个事物</p>
@@ -1858,8 +1831,8 @@
 <li><p>对外点很敏感；</p>
 <p>原因： K-Means 算法的核心是计算每个簇的质心，而这个质心通常是该簇内所有数据点的<strong>均值</strong>。均值的一个众所周知的特性是它对极端值（即外点）非常敏感。一个或几个离群点可以显著地拉动均值，使其偏离大部分数据点的真实中心。</p>
 </li>
-<li><p>只能检测圆&#x2F;球形群组；</p>
-<p>K-Means 聚类算法对初始化（即选择初始的 K 个“大哥”&#x2F;质心）非常敏感，主要有以下几个原因：</p>
+<li><p>只能检测圆/球形群组；</p>
+<p>K-Means 聚类算法对初始化（即选择初始的 K 个“大哥”/质心）非常敏感，主要有以下几个原因：</p>
 <ol>
 <li><strong>局部最优解（Local Optima）的风险：</strong> K-Means 算法的目标是最小化所有数据点到其所属簇质心的距离平方和（也称为惯性或误差平方和）。这是一个优化问题。然而，K-Means 采用的是迭代逼近的方法，每次迭代都试图将质心移动到使其所在簇内的点到质心的距离之和最小的位置。 这个优化过程是一个“贪婪”的过程，它会收敛到一个局部最优解，而不是全局最优解。这意味着，如果初始质心选择得不好，算法可能会陷入一个次优的聚类结果，即使存在一个更好的聚类方式，算法也无法找到。</li>
 <li><strong>聚类结果的不稳定性：</strong> 由于初始质心的随机性，每次运行 K-Means 算法，即使是相同的数据集和相同的 K 值，也可能得到不同的聚类结果。这是因为不同的初始质心可能会引导算法沿着不同的路径收敛到不同的局部最优解。这使得 K-Means 的结果不够稳定和可重复。</li>
@@ -1877,14 +1850,14 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230413214223219.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230413214223219.png"
+                      alt=""
                 ></p>
 <p><strong>随机选取像素点（或数据点）：</strong> 算法的起点是随机选择一个数据点作为初始的“探测点”或“中心”。</p>
 <p><strong>向密度较大的区域漂移（Mean Shift vector）：</strong> 从初始点开始，算法会计算一个“Mean Shift vector”（均值漂移向量）。这个向量指向当前“搜索窗口”内数据点密度增大的方向。本质上，它是当前窗口内所有数据点相对于中心点的平均偏移量。</p>
 <ul>
 <li><strong>Search window (搜索窗口)：</strong> 图中蓝色的圆圈代表“搜索窗口”。这是一个以当前中心点为圆心，具有固定半径（或可变半径）的区域。算法只考虑这个窗口内的数据点。</li>
-<li><strong>Center of mass (质心&#x2F;平均位置)：</strong> 图中橙色的点和虚线表示当前搜索窗口内所有数据点的“质心”或平均位置。Mean Shift vector 就是从当前窗口中心指向这个质心的向量。</li>
+<li><strong>Center of mass (质心/平均位置)：</strong> 图中橙色的点和虚线表示当前搜索窗口内所有数据点的“质心”或平均位置。Mean Shift vector 就是从当前窗口中心指向这个质心的向量。</li>
 </ul>
 <p><strong>迭代直到 search window 不再漂移：</strong> 算法会沿着 Mean Shift vector 的方向移动当前的中心点，然后重复上述步骤：在新位置重新计算搜索窗口内的质心，并计算新的 Mean Shift vector。这个过程不断迭代，直到 Mean Shift vector 的长度非常小，意味着中心点已经移动到一个密度最高的区域，即“密度中心”，它不再继续显著漂移。</p>
 <p><strong>search window（搜索窗口）会随着 Mean Shift vector 而不断漂移。</strong></p>
@@ -1901,8 +1874,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230413214415735.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230413214415735.png"
+                      alt=""
                 ></p>
 <p><strong>最终如何聚类</strong></p>
 <p>如何确定所有点的聚类呢？ Mean-shift 算法通常会这样做：</p>
@@ -1933,7 +1906,7 @@
 </ol>
 <p>优点：</p>
 <ul>
-<li>不只是可以检测圆&#x2F;球形cluster；</li>
+<li>不只是可以检测圆/球形cluster；</li>
 <li>只需要指定一个参数，即检测窗口的大小（检测窗口过小可能卡在局部最优值，太大了导致最终只会出现一个类）；</li>
 <li>对外点有鲁棒性；</li>
 </ul>
@@ -1956,52 +1929,51 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230413214926928.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230413214926928.png"
+                      alt=""
                 ></p>
 <p>边上的权值的定义如下：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://gintoki-jpg.github.io/images/image-20230413215131130.png"
-                     
+                      alt=""
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230413215207549.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230413215207549.png"
+                      alt=""
                 ></p>
 <p>拥有了带权图之后，只需要选择一个合适的边切割方法即可；</p>
 <p>最小割的思想是将权值最小的边去掉</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230413215357415.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230413215357415.png"
+                      alt=""
                 ></p>
 <p>但是最小割倾向于将像素点单独切割出来，这将导致分割出很多“小块”，因此一般不选择最小割，而是选择归一化图割，归一化图割的核心思想如下</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230413215531306.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230413215531306.png"
+                      alt=""
                 ></p>
 <p>如何具体的实现归一化图割呢？主要流程如下</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230413215715187.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230413215715187.png"
+                      alt=""
                 ></p>
 <p>推导</p>
-<img  
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250611195446326.png"
                       alt="image-20250611195446326" style="zoom:80%;" 
-                >
-
+                ></p>
 <p>第二小特征值（Fiedler value）的大小反映了图的<strong>连通性强度</strong>。它被称为代数连通性（Algebraic Connectivity）。Fiedler value 越小，意味着图越容易被分成两个部分。</p>
 <p>优点：</p>
 <ul>
@@ -2037,8 +2009,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230429084529393.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230429084529393.png"
+                      alt=""
                 ></p>
 <p>因此，根据不同的目标和使用的方法，图像识别算法最终可分为如下四种：</p>
 <ul>
@@ -2053,7 +2025,7 @@
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://gintoki-jpg.github.io/images/image-20230429085325301.png"
-                     
+                      alt=""
                 ></p>
 <h5 id="1-图像表达和分类策略"><a href="#1-图像表达和分类策略" class="headerlink" title="(1)图像表达和分类策略"></a>(1)图像表达和分类策略</h5><p>（1）图像表达的方式有很多，但无论使用哪种，应当实现的基本目标为图像表达对视角、光照、尺寸、遮挡、杂波、形变有Invariance的特性。</p>
 <p>（2）常用的分类策略可分为产生式和判别式。举例说明两者之间的区别，比如当前有任务“识别张三”：</p>
@@ -2070,37 +2042,37 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230429090003543.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230429090003543.png"
+                      alt=""
                 ></p>
 <p>用更加官方的话来说，“判别式建模的是后验概率，产生式建模的是先验概率和似然概率”，什么是先验概率，什么又是后验概率和似然概率呢？（实际上就是贝叶斯公式里的各部分）</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230429090207628.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230429090207628.png"
+                      alt=""
                 ></p>
 <p>常见的判别式模型有SVM、神经网络、Boosting等，常见的生成式模型有朴素贝叶斯、层次贝叶斯等。</p>
 <h5 id="2-Recognition"><a href="#2-Recognition" class="headerlink" title="(2)Recognition"></a>(2)Recognition</h5><p>在确定了图像表达方式、分类策略以及学习方式后，最后就是Recognition，前面也说过识别主要分为分类和检测，分类非常的简单只需要对<code>整图</code>进行类别判断即可；检测稍难，不仅要从整图检测(detection)出物体，还需要识别(recognition)<code>窗口</code>中物体的类别。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525201913582.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525201913582.png"
+                      alt=""
                 ></p>
 <p>检测任务具有滑动窗口问题。检测任务的本质就是判断图像中的每个窗口是否是待检测目标（检测任务实际上也是一个分类任务，只是在一个窗口内的分类）这就要求评判每个窗口的速度尽量快，进而实现实时检测。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230429090735416.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230429090735416.png"
+                      alt=""
                 ></p>
 <p>滑动窗口的另一个问题是，可能有多个检测窗口都输出真值，需要使用非最大化抑制得到一个检测框。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230429090800744.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230429090800744.png"
+                      alt=""
                 ></p>
 <h3 id="8-2-图像分类"><a href="#8-2-图像分类" class="headerlink" title="8.2 图像分类"></a>8.2 图像分类</h3><p>随着计算机与互联网技术以及数字图像获取技术的快速发展,海量的数字图像出现在互联网上及人们周边的生活中。依靠传统的人工方式对图像进行分类、组织和管理非常耗时耗力，所以希望能够通过计算机对图像中的目标内容进行自动地分析处理，从而将图像数据快速、规范、自动地进行组织、归类和管理。</p>
 <p>早期的图像分类主要依赖于文本特征，采用人工方式为图像标注文本，使用的是基于文本的图像分类模式。由于图像标注需要人为地辨识并为其选定关键字，故其分类的效果不是非常理想，且耗时严重。随着计算机技术和数字化图像技术的发展，图像库的规模越来越大，人工标注的方式对图像进行分类已不可能，人们开始逐渐将研究的重点转移到基于图像内容分析的自动分类研究上。</p>
@@ -2124,7 +2096,7 @@
 <p>图像分类常用的是深度学习的模型（毕竟诸如CNN这种能够自动提取图像的局部特征）。但是，这并不妨碍SVM是一个优秀的算法，大量的实践都证明它对于小批量数据集的分类、预测都能够得到较好的效果。</p>
 <h4 id="8-2-1-词袋模型概述"><a href="#8-2-1-词袋模型概述" class="headerlink" title="8.2.1 词袋模型概述"></a>8.2.1 词袋模型概述</h4><p>参考链接（这一节看文本很难形成直观上的理解，推荐搭配视频）：</p>
 <ul>
-<li><p>视频：<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1nz4y197Qv?p=11&vd_source=276d55048634a5b508b1b53a1ecd56b3" >09.识别&amp;词袋模型.1080P_哔哩哔哩_bilibili<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（这个视频只能作为最基本的入门来看，很多描述不准确）；</p>
+<li><p>视频：<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1nz4y197Qv?p=11&amp;vd_source=276d55048634a5b508b1b53a1ecd56b3" >09.识别&amp;词袋模型.1080P_哔哩哔哩_bilibili<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（这个视频只能作为最基本的入门来看，很多描述不准确）；</p>
 </li>
 <li><p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/wxl845235800/p/10564121.html" >视觉单词模型、词袋模型BoW - ostartech - 博客园 (cnblogs.com)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>；</p>
 </li>
@@ -2143,8 +2115,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230429100507214.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230429100507214.png"
+                      alt=""
                 ></p>
 <p>利用BoVW模型表示图像，获得图像的全局直方图表示，主要有四个关键步骤：</p>
 <p>Step 1：图像局部特征提取（Image Local Features Extrication）。根据具体应用考虑，综合考虑特征的独特性、提取算法复杂性、效果好坏等选择特征。利用局部特征提取算法，从图像中提取局部特征。 – SIFT特征提取器</p>
@@ -2156,30 +2128,30 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230429100908612.png"
+                     data-src="\计算机视觉笺疏\image-20230429100908612.png"
                       alt="原始图像"
                 ></p>
-<p>​							</p>
+<p>​                            </p>
 <p>第一步是做局部特征提取，假设使用SIFT特征提取器提取到了如下这些特征（可以认为是拼图，我们将三张原始图像的拼图都放在一个袋子中，这就是我们的“词袋”）</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230429101118048.png"
+                     data-src="\计算机视觉笺疏\image-20230429101118048.png"
                       alt="词袋"
                 ></p>
-<p>第二步是视觉词典构造，也就是从上述那么多特征中选取k个单词来构成视觉词典，这里的k由人为规定（一般需要先验知识）。使用K-means聚类算法将词袋中的拼图聚为k个类，k个类别中心的拼图就是k个单词（假设我们令k&#x3D;4）</p>
+<p>第二步是视觉词典构造，也就是从上述那么多特征中选取k个单词来构成视觉词典，这里的k由人为规定（一般需要先验知识）。使用K-means聚类算法将词袋中的拼图聚为k个类，k个类别中心的拼图就是k个单词（假设我们令k=4）</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230429101431211.png"
+                     data-src="\计算机视觉笺疏\image-20230429101431211.png"
                       alt="视觉词典"
                 ></p>
-<p>​				</p>
+<p>​                </p>
 <p>第三步和第四步通常合并进行，即对词袋中的每个拼图都使用最近邻算法，寻找与其最近的在视觉词典中的单词（我们认为这两张图像属于同一个单词），找到之后对直方图中该单词的频数+1。因为我们有三张原始图像，所以对应有三个直方图，每个直方图的横轴为视觉词典中的单词，纵轴为该单词出现的频数，因此对原始三张图像的直方图表示如下</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230429101848165.png"
+                     data-src="\计算机视觉笺疏\image-20230429101848165.png"
                       alt="直方图表示"
                 ></p>
 <hr>
@@ -2188,7 +2160,8 @@
 </blockquote>
 <p>A：回答参考<a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/31580379" >KNN和K-mean有什么不同？ - 知乎 (zhihu.com)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>；</p>
 <ul>
-<li>KNN<ul>
+<li><p>KNN</p>
+<ul>
 <li><p>分类算法</p>
 </li>
 <li><p>监督学习</p>
@@ -2198,12 +2171,13 @@
 <li><p>没有明显的训练过程，基于Memory-based learning</p>
 </li>
 <li><p>K值含义 - 对于一个样本X，要给它分类，首先从数据集中，在X附近找离它最近的K个数据点，将它划分为归属于类别最多的一类</p>
-<img  
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250611204317482.png"
                       alt="image-20250611204317482" style="zoom:67%;" 
-                ></li>
+                ></p>
+</li>
 </ul>
 </li>
 <li>K-means<ul>
@@ -2239,12 +2213,12 @@
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://gintoki-jpg.github.io/images/image-20230525164957239.png"
-                     
+                      alt=""
                 ></a></p>
 <h3 id="8-3-图像检测"><a href="#8-3-图像检测" class="headerlink" title="8.3 图像检测"></a>8.3 图像检测</h3><p>参考资料：</p>
 <ul>
 <li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/matrix_space/article/details/53840740" >(7条消息) 机器学习: Viola-Jones 人脸检测算法解析(一)_vio-jones算法_Matrix_11的博客-CSDN博客<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>；</li>
-<li>[(7条消息) 机器学习: Viola-Jones 人脸检测算法解析(二)_violajones算法_Matrix_11的博客-CSDN博客](<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/matrix_space/article/details/53892765?ops_request_misc=&request_id=&biz_id=102&utm_term=Viola-Jones" >https://blog.csdn.net/matrix_space&#x2F;article&#x2F;details&#x2F;53892765?ops_request_misc&#x3D;&amp;request_id&#x3D;&amp;biz_id&#x3D;102&amp;utm_term&#x3D;Viola-Jones<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 人脸检测算法解析&amp;utm_medium&#x3D;distribute.pc_search_result.none-task-blog-2<del>all</del>sobaiduweb~default-1-53892765.142^v88^insert_down38v5,239^v2^insert_chatgpt&amp;spm&#x3D;1018.2226.3001.4187)；</li>
+<li>[(7条消息) 机器学习: Viola-Jones 人脸检测算法解析(二)_violajones算法_Matrix_11的博客-CSDN博客](<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/matrix_space/article/details/53892765?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=Viola-Jones" >https://blog.csdn.net/matrix_space/article/details/53892765?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=Viola-Jones<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 人脸检测算法解析&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-53892765.142^v88^insert_down38v5,239^v2^insert_chatgpt&amp;spm=1018.2226.3001.4187)；</li>
 <li><a class="link"   target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1419615" >HOG特征详解与行人检测-腾讯云开发者社区-腾讯云 (tencent.com)<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>；</li>
 </ul>
 <h4 id="8-3-1-人脸检测"><a href="#8-3-1-人脸检测" class="headerlink" title="8.3.1 人脸检测"></a>8.3.1 人脸检测</h4><p>在人脸检测邻域，Viola-Jones算法非常经典。Viola-Jones算法在2001年的CVPR上提出，因为其高效而快速的检测即使到现在也依然被广泛使用。VJ算法包含以下几个重要的部分：</p>
@@ -2254,34 +2228,34 @@
 <li>利用 Adaboost 算法进行训练；</li>
 <li>建立层级分类器；</li>
 </ol>
-<h5 id="1-Harr特征"><a href="#1-Harr特征" class="headerlink" title="(1)Harr特征"></a>(1)Harr特征</h5><p>一般来说，人脸会有一些基本的共性，比如眼睛区域会比脸颊区域要暗很多、鼻子一般属于脸部的高光区域因而鼻子会比周围的脸颊要亮很多、一张正脸图像，眼睛，眉毛，鼻子，嘴巴等的相对位置是有规律可循的。__Haar特征考虑的是某一特定像素点相邻的矩形区域的特征__，这需要将整个矩形区域内的像素相加然后再做减法运算。一般的，有以下几种Harr特征算子</p>
+<h5 id="1-Harr特征"><a href="#1-Harr特征" class="headerlink" title="(1)Harr特征"></a>(1)Harr特征</h5><p>一般来说，人脸会有一些基本的共性，比如眼睛区域会比脸颊区域要暗很多、鼻子一般属于脸部的高光区域因而鼻子会比周围的脸颊要亮很多、一张正脸图像，眼睛，眉毛，鼻子，嘴巴等的相对位置是有规律可循的。<strong>Haar特征考虑的是某一特定像素点相邻的矩形区域的特征</strong>，这需要将整个矩形区域内的像素相加然后再做减法运算。一般的，有以下几种Harr特征算子</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525202931622.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525202931622.png"
+                      alt=""
                 ></p>
 <p>普通的特征都是针对单一像素，Harr特征是针对矩形区域，因此计算时需要先将每个矩形区域的像素进行求和，然后再使用上面的算子进行计算</p>
 <h5 id="2-积分图像"><a href="#2-积分图像" class="headerlink" title="(2)积分图像"></a>(2)积分图像</h5><p>为了计算Harr特征，需要先对矩形区域内的所有像素求和。而一张图像中的像素形成的矩形区域形状、大小不定，因此如果使用常规的对每个矩形区域内的像素进行遍历求和的方法会导致很大的运算量。下面引入这样一种数据结构，称为积分图像。积分图像的原理非常简单，即对积分图像中的任何一点，该点的积分图像值等于该点在原图中的点左上角的所有像素值之和，表达式如下</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525204712833.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525204712833.png"
+                      alt=""
                 ></p>
 <p>积分图像与原图之间满足如下关系</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525204801412.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525204801412.png"
+                      alt=""
                 ></p>
 <p>其中I表示积分图像，f表示原图，x,y表示像素点的坐标。因此，一张图像的积分图像记录了这张图像上每一个像素点其左上角所有像素的和。如果把一张图像的左上角看做坐标原点，那么上面的表达式就是原点到该像素点之间的所有像素点的离散求和，这可以看成是一种积分，所以这也是积分图像名称的由来。利用积分图像，可以非常快速的计算一张图像上任意一个矩形区域内的像素和</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525205220890.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525205220890.png"
+                      alt=""
                 ></p>
 <p>这意味着，原图中任意一个矩形区域的像素和，都可以由上述运算法则求解。</p>
 <p>在VJ人脸检测中，主要使用了三种不同的矩形特征（Harr特征中的其中三个），分别是二邻接，三邻接，四邻接矩形，矩形的Value计算公式为</p>
@@ -2289,14 +2263,14 @@
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://gintoki-jpg.github.io/images/image-20230525211433397.png"
-                     
+                      alt=""
                 ><br><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525205709327.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525205709327.png"
+                      alt=""
                 ></p>
-<p>因为一个矩阵需要使用四个点来计算&#x2F;表示，进而二邻接矩形需要六个点表示，三邻接矩形需要八个点，而四邻接矩形需要九个点表示。</p>
+<p>因为一个矩阵需要使用四个点来计算/表示，进而二邻接矩形需要六个点表示，三邻接矩形需要八个点，而四邻接矩形需要九个点表示。</p>
 <p>下面来计算给定一张图像，能够得到多少个矩形特征。</p>
 <p>VJ算法中使用的图像大小都是<code>24*24</code>的图像大小。考虑水平方向和垂直方向二邻接矩形有两种情况1×2和2×1，三邻接矩形也有两种情况1×3和3×1，而四邻接矩形只有一种情况2×2。</p>
 <p>下面列出每种矩阵可能的size：</p>
@@ -2307,68 +2281,60 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525220003853.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525220003853.png"
+                      alt=""
                 ></p>
-<img  
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="D:\大四下\计算机视觉\assets\image-20250611211139898.png"
                       alt="image-20250611211139898" style="zoom:67%;" 
-                >
-
-<img  
+                ></p>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250611211331718.png"
                       alt="image-20250611211331718" style="zoom:67%;" 
-                >
-
+                ></p>
 <p>其中h(x)就是一个强分类器</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525220054527.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525220054527.png"
+                      alt=""
                 ></p>
-<p>而h<del>j</del>(x)就是“弱”分类器，h<del>j</del>(x)本质上是一个简单的阈值函数</p>
+<p>而h~j~(x)就是“弱”分类器，h~j~(x)本质上是一个简单的阈值函数</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525220211292.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525220211292.png"
+                      alt=""
                 ></p>
 <blockquote>
-<p>规定：给定N个训练样本(x^i^,y^i^)，其中含有m个正样本，l个负样本。如果x^i^是人脸图像则y^i^&#x3D;1，否则y^i^&#x3D;0。</p>
+<p>规定：给定N个训练样本(x^i^,y^i^)，其中含有m个正样本，l个负样本。如果x^i^是人脸图像则y^i^=1，否则y^i^=0。</p>
 </blockquote>
 <p>在 AdaBoost 的整个过程中，<strong>门限（阈值 Tj）不是固定的</strong>，并且<strong>不同哈尔特征的门限通常是不同的</strong></p>
 <p>基于Boost的训练算法具体流程如下：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525220830778.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525220830778.png"
+                      alt=""
                 ></p>
-<img  
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250611215720886.png"
                       alt="image-20250611215720886" style="zoom: 50%;" 
-                >
-
-<img  
+                ></p>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250611215808555.png"
                       alt="image-20250611215808555" style="zoom: 50%;" 
-                >
-
-
-
-
-
+                ></p>
 <ul>
-<li>θ<del>j</del>门限是在第1步确定的，简单理解就是选择什么样的θ能够使得该弱分类器效果最好（正确率最高）；</li>
+<li>θ~j~门限是在第1步确定的，简单理解就是选择什么样的θ能够使得该弱分类器效果最好（正确率最高）；</li>
 <li>β是一个小于1的数，权重更新会导致权重越来越小，这意味着搞不定的样本的权值不变，搞定的权值的样本减小（变相增大搞不定的样本的权值）；</li>
 <li>α权重决定了最终该弱分类器在整个Boosting组合中的重要程度，与β成反比，与分类错误率ε成正比；</li>
 <li>上述步骤2，3，4会一直循环，直到生成的强分类器的性能达到要求，此时选择的弱分类器就是前面162336个矩形特征中被选中的特征（即此处的特征和弱分类器是等价的）；</li>
@@ -2378,8 +2344,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525222059747.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525222059747.png"
+                      alt=""
                 ></p>
 <ul>
 <li>处于cascade层级分类器前端的分类器分类速度较快，可以拒绝大部分负样本并且检测出几乎所有的正样本（正样本一定要通过，负样本在可接受范围内可通过一定数量）；</li>
@@ -2389,54 +2355,53 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525222852635.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525222852635.png"
+                      alt=""
                 ></p>
 <p>层级分类器总的识别率D或false positive F是每一层的分类器的识别率d和false positive f的乘积</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525222957256.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525222957256.png"
+                      alt=""
                 ></p>
 <p>一个层级分类器，应该综合考虑以下几个因素：</p>
 <ul>
 <li>层级分类器的层次，即需要多少个分类器；</li>
-<li>每一层分类器需要测试的特征数n<del>i</del>；</li>
+<li>每一层分类器需要测试的特征数n~i~；</li>
 <li>每一层分类器的阈值；</li>
 </ul>
 <h4 id="8-3-2-行人检测"><a href="#8-3-2-行人检测" class="headerlink" title="8.3.2 行人检测"></a>8.3.2 行人检测</h4><h5 id="1-HOG概述"><a href="#1-HOG概述" class="headerlink" title="(1)HOG概述"></a>(1)HOG概述</h5><p>HOG特征全称方向梯度直方图特征，在对象检测与模式匹配中是一种常见的特征提取算法，是一种基于本地像素块进行特征直方图提取的一种算法，对象局部的变形与光照影响有很好的稳定性，最初是用HOG特征来来识别人像，通过HOG特征提取+SVM训练，可以得到很好的效果。HOG特征提取的大致流程如下</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525225326527.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525225326527.png"
+                      alt=""
                 ></p>
 <p>1.灰度化：对HOG特征提取来说第一步是对输入的彩色图像转换为灰度图像，图像灰度化的方法有很多，不同灰度化方法之间有一些微小的差异，从彩色到灰度的图像转换可以表示如下</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525225421591.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525225421591.png"
+                      alt=""
                 ></p>
 <p>2.计算图像梯度：计算图像的X方向梯度dx与Y方向梯度dy，根据梯度计算mag与角度，计算梯度时候可以先高斯模糊一下(可选)，然后使用sobel或者其它一阶导数算子计算梯度值dx、dy、mag、angle</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525225516084.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525225516084.png"
+                      alt=""
                 ></p>
-<img  
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250611212612008.png"
                       alt="image-20250611212612008" style="zoom:67%;" 
-                >
-
+                ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20250611212625969.png"
+                     data-src="\计算机视觉笺疏\image-20250611212625969.png"
                       alt="image-20250611212625969"
                 ></p>
 <p>3.Cell分割与Block对于图像来说，分成8x8像素块，每个块称为一个Cell，每个2x2大小的Cell称为一个Block，每个Cell根据角度与权重建立直方图，每20度为一个BIN，每个Cell得到9个值、每个Block得到36个值(4x9)，图像如下</p>
@@ -2444,43 +2409,41 @@
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://gintoki-jpg.github.io/images/image-20230525225600363.png"
-                     
+                      alt=""
                 ></p>
-<img  
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250611213634812.png"
                       alt="image-20250611213634812" style="zoom:67%;" 
-                >
-
-<p>每个Block为单位进行L2数据归一化，作用是抵消光照&#x2F;迁移影响，L2的归一化的公式如下</p>
+                ></p>
+<p>每个Block为单位进行L2数据归一化，作用是抵消光照/迁移影响，L2的归一化的公式如下</p>
 <p>V 是一个 <strong>36 维的 Block 特征向量</strong></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525225620678.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525225620678.png"
+                      alt=""
                 ></p>
-<p>4.生成描述子：对于窗口64x128范围大小的像素块，可以得到8x16个Cell， 使用Block在窗口移动，得到输出的向量总数为7x15x36&#x3D;3780特征向量，每次Block移动步长是八个像素单位，一个Cell大小</p>
-<img  
+<p>4.生成描述子：对于窗口64x128范围大小的像素块，可以得到8x16个Cell， 使用Block在窗口移动，得到输出的向量总数为7x15x36=3780特征向量，每次Block移动步长是八个像素单位，一个Cell大小</p>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="\计算机视觉笺疏\image-20250611214206797.png"
                       alt="image-20250611214206797" style="zoom:67%;" 
-                >
-
+                ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525225647957.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525225647957.png"
+                      alt=""
                 ></p>
 <h5 id="2-HOG-SVM行人检测"><a href="#2-HOG-SVM行人检测" class="headerlink" title="(2)HOG+SVM行人检测"></a>(2)HOG+SVM行人检测</h5><p>基于HOG特征和SVM分类器的行人检测的基本流程如下</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%AC%BA%E7%96%8F%5Cimage-20230525225858138.png"
-                     
+                     data-src="\计算机视觉笺疏\image-20230525225858138.png"
+                      alt=""
                 ></p>
 <p>训练过程中正样本为图片中包含有目标区域(行人)的boundingbox，尺寸统一为检测窗口的大小即64×128，负样本不需要统一尺寸，只需比检测窗口大，且图片中不包含检测目标，可任意截取图片中64×128大小的区域提取HOG特征作为负样本的特征向量，并与正样本图片中boundingbox区域提取出的HOG特征向量一起训练，得到SVM的分类模型。</p>
 <p>检测过程中采用滑动窗口法，检测窗口尺寸固定不变，对待检测图片进行尺度缩放，在每一层的图像上，用固定大小的滑动窗口提取HOG特征，并根据训练好的分类模型判断检测窗口是否为目标(行人)。因此HOG + SVM进行行人检测的过程实际上就是对图像的检测窗口提取HOG特征进行分类判决的过程。</p>
@@ -2493,7 +2456,7 @@
 <p><strong>2. Compute HOG (histogram of gradient) features within each window</strong></p>
 <ul>
 <li><strong>HOG 特征提取：</strong> 对于在步骤 1 中提取出的每一个 64×128 像素的图像子窗口，都会计算它的 HOG 特征描述符。</li>
-<li><strong>HOG 特征的计算过程：</strong> 这包括将窗口划分为 Cells（例如 8×8 像素），在每个 Cell 内计算梯度方向直方图（例如 9 个 bin），然后将这些 Cells 组合成 Block（例如 2×2 个 Cell，共 16×16 像素），并对每个 Block 进行归一化（如 L2 归一化）以增强对光照变化的鲁棒性。最终，所有归一化后的 Block 特征串联起来，形成一个高维的 HOG 特征向量（例如 7×15×36&#x3D;3780 维）。</li>
+<li><strong>HOG 特征的计算过程：</strong> 这包括将窗口划分为 Cells（例如 8×8 像素），在每个 Cell 内计算梯度方向直方图（例如 9 个 bin），然后将这些 Cells 组合成 Block（例如 2×2 个 Cell，共 16×16 像素），并对每个 Block 进行归一化（如 L2 归一化）以增强对光照变化的鲁棒性。最终，所有归一化后的 Block 特征串联起来，形成一个高维的 HOG 特征向量（例如 7×15×36=3780 维）。</li>
 </ul>
 <p><strong>3. Score the window with a linear SVM classifier</strong></p>
 <ul>
