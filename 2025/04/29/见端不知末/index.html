@@ -30,7 +30,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-04-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-10-19T13:18:29.681Z">
+<meta property="article:modified_time" content="2025-10-25T09:04:56.948Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="前端开发">
 <meta property="article:tag" content="学习笔记">
@@ -205,15 +205,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">9</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">13</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
         <div class="label text-third-text-color text-sm">Categories</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
         <div class="label text-third-text-color text-sm">Posts</div>
     </a>
 </div>
@@ -264,8 +264,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-10-19 21:18:29</span>
-            <span class="mobile">2025-10-19 21:18:29</span>
+            <span class="desktop">2025-10-25 17:04:56</span>
+            <span class="mobile">2025-10-25 17:04:56</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -403,11 +403,42 @@ TypeError: null is not valid value for the expected return type integer</code></
 <li><p>如果报<code>Can&#39;t resolve &#39;sass-loader&#39;</code>错误，表明缺少sass-loader包，可先用<code>npm ls sass-loader</code>命令进行确定，如果报错或报空，则先<code>npm install --save-dev node-sass</code>后<code>npm install --save-dev sass-loader</code>，后者装的依赖于前者其中<code>--save-dev</code>表示将要安装的包作为开发依赖（development dependency）保存到项目的 package.json 文件中。开发依赖是项目开发阶段所需要的包，在项目打包发布时通常不会包含。</p>
 </li>
 </ol>
+<h5 id="筛选器的基本操作"><a href="#筛选器的基本操作" class="headerlink" title="筛选器的基本操作"></a>筛选器的基本操作</h5><p><code>筛选器a,筛选器b&#123;...&#125;</code>表示对于a和b筛选器而言，均采用括号内的样式</p>
 <h5 id="元素排布"><a href="#元素排布" class="headerlink" title="元素排布"></a>元素排布</h5><p><code>display: flex;</code> </p>
 <p>设置父元素的布局为 <strong>Flexbox 布局</strong>，使得它的直接子元素成为 <strong>Flex 容器</strong>，从而可以使用 Flexbox 的对齐属性。</p>
 <p><strong><code>align-items: center;</code></strong>：将 <strong>子元素</strong> 在容器的 <strong>垂直方向</strong>（交叉轴）上居中对齐。</p>
 <p><strong><code>justify-content: center;</code></strong>：将 <strong>子元素</strong> 在容器的 <strong>水平方向</strong>（主轴）上居中对齐。</p>
 <p><strong><code>justify-content: space-between;</code></strong>：将子元素在主轴上（通常是水平方向）均匀分布，第一个子元素靠左，最后一个子元素靠右，中间的元素平均分布。</p>
+<p><code>width:x%</code> 表示当前元素的宽度对其父元素宽度的占比</p>
+<p><code>box-sizing: border-box;</code></p>
+<p>​     CSS采用的是盒模型，每个元素都被看作一个“盒子”，由以下几层组成（从内到外）：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">┌───────────────────────────────┐</span><br><span class="line">│           border（边框）       │</span><br><span class="line">│  ┌───────────────────────────┐│</span><br><span class="line">│  │        padding（内边距）   ││</span><br><span class="line">│  │  ┌───────────────────────┐││</span><br><span class="line">│  │  │    content（内容区）   │││</span><br><span class="line">│  │  └───────────────────────┘││</span><br><span class="line">│  └───────────────────────────┘│</span><br><span class="line">└───────────────────────────────┘</span><br></pre></td></tr></table></figure></div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th><code>box-sizing</code> 值</th>
+<th><code>width</code> 指代</th>
+<th>实际占据空间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>标准盒模型（默认）</strong></td>
+<td><code>content-box</code></td>
+<td>内容区宽度</td>
+<td>内容 + padding + border</td>
+</tr>
+<tr>
+<td><strong>怪异盒模型（推荐）</strong></td>
+<td><code>border-box</code></td>
+<td>内容 + padding + border 一起算在宽度里</td>
+<td>刚好等于设置的宽度</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3><ol>
 <li>app.vue一般不用来写页面，用它写页面跳转到其他页面时会带有这个页面。涉及跳转时，一般将<code>&lt;router-view&gt; &lt;/router-view&gt;</code><br>写在app.vue中。在多页面中，第一个页面也就是路由表的第一项。</li>
 <li>页面名字必须俩单词</li>
@@ -497,7 +528,7 @@ Vue.use(ElementUI)</code></p>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-10-19 21:18:29
+                    :</strong> 2025-10-25 17:04:56
             </li>
         
         <li>
@@ -537,6 +568,18 @@ Vue.use(ElementUI)</code></p>
 
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2026/08/10/infra%20commiter/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Infra:A commiter&#39;s Perspective</span>
+						<span class="post-nav-item">Prev posts</span>
+					</span>
+				</a>
+			</div>
 			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
@@ -629,12 +672,12 @@ Vue.use(ElementUI)</code></p>
               <span>2022</span>
               -
             
-            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">2314</a>
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">2314</a>
             
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        5 posts in total
+                        6 posts in total
                     </span>
                     
                 </p>
